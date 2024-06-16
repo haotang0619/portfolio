@@ -13,8 +13,23 @@ export default function Banner() {
       }}
     >
       <img alt="Howard" src="/imgs/howard.png" width="280px" />
-      <Typography sx={{ textTransform: 'uppercase' }} variant="T64B">{`Hi, I’m Howard`}</Typography>
-      <Typography sx={{ color: 'text.secondary', textTransform: 'uppercase' }} variant="T32B">
+      <Typography
+        sx={{
+          fontSize: { sm: '64px', xs: '48px' },
+          textAlign: 'center',
+          textTransform: 'uppercase',
+        }}
+        variant="T64B"
+      >{`Hi, I’m Howard`}</Typography>
+      <Typography
+        sx={{
+          color: 'text.secondary',
+          fontSize: { sm: '32px', xs: '24px' },
+          textAlign: 'center',
+          textTransform: 'uppercase',
+        }}
+        variant="T32B"
+      >
         Chief Technology Officer
       </Typography>
 
@@ -33,6 +48,7 @@ export default function Banner() {
           cursor: 'pointer',
           display: 'flex',
           padding: '20px',
+          transform: { sm: 'scale(1)', xs: 'scale(0.7)' },
         }}
       >
         <ArrowDown size={78} />

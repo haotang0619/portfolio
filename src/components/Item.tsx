@@ -43,11 +43,21 @@ export default function Item({
         }}
       >
         <Grid item md={4} xs={12}>
-          <Typography variant="T32B">{period}</Typography>
+          <Typography
+            sx={{ fontSize: { sm: '32px', xs: '24px' }, lineHeight: { sm: '52px', xs: '40px' } }}
+            variant="T32B"
+          >
+            {period}
+          </Typography>
         </Grid>
 
         <Grid item md={8} xs={12}>
-          <Typography variant="T32B">{title}</Typography>
+          <Typography
+            sx={{ fontSize: { sm: '32px', xs: '24px' }, lineHeight: { sm: '52px', xs: '40px' } }}
+            variant="T32B"
+          >
+            {title}
+          </Typography>
           {!isHover ? (
             <Typography sx={{ marginTop: '16px' }} variant="T16M">
               {subtitle}

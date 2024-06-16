@@ -15,7 +15,7 @@ export default function Education() {
       <Box sx={{ maxWidth: '898px', padding: '0 24px', width: '100%' }}>
         <Typography
           id="EDUCATION"
-          sx={{ color: 'text.secondary', marginBottom: '32px', width: '100%' }}
+          sx={{ color: 'text.secondary', marginBottom: { sm: '32px', xs: '16px' }, width: '100%' }}
           variant="T14B"
         >
           EDUCATION

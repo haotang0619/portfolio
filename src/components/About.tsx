@@ -20,7 +20,12 @@ export default function About() {
         </Typography>
 
         <Typography
-          sx={{ '& > span': { color: 'primary.main' }, maxWidth: '850px' }}
+          sx={{
+            '& > span': { color: 'primary.main' },
+            fontSize: { sm: '32px', xs: '20px' },
+            lineHeight: { sm: '52px', xs: '34px' },
+            maxWidth: '850px',
+          }}
           variant="T32S"
         >
           Hi! My name is Howard Tang or Hao Tang. I am a <span>Full Stack Web Developer</span> with
