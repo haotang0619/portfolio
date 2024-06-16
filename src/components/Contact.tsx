@@ -15,11 +15,12 @@ export default function Contact() {
         alignItems: 'center',
         display: 'flex',
         flexFlow: 'column',
-        padding: '72px 24px',
+        padding: '72px 24px 36px',
       }}
     >
       <Box sx={{ maxWidth: '850px', width: '100%' }}>
         <Typography
+          id="CONTACT"
           sx={{ color: 'text.secondary', marginBottom: '32px', width: '100%' }}
           variant="T14B"
         >

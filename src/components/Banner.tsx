@@ -19,8 +19,15 @@ export default function Banner() {
       </Typography>
 
       <Box
+        onClick={() =>
+          window.scrollTo({
+            behavior: 'smooth',
+            top: document.getElementById('ABOUT').offsetTop - 48,
+          })
+        }
         sx={{
           '& > svg': { transform: 'scaleY(0.8)' },
+          '&:hover': { opacity: 0.75 },
           border: '1px solid #FFFFFF',
           borderRadius: '50%',
           cursor: 'pointer',
