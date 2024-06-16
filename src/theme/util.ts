@@ -40,7 +40,7 @@ const sizeMapping: Record<
   14: { fontSize: 14, lineHeight: '20px' },
   16: { fontSize: 16, lineHeight: '24px' },
   24: { fontSize: 24, lineHeight: '32px' },
-  32: { fontSize: 32, lineHeight: '40px' },
+  32: { fontSize: 32, lineHeight: '52px' },
   64: { fontSize: 64, lineHeight: '82px' },
   88: { fontSize: 88, lineHeight: '114px' },
 };

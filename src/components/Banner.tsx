@@ -13,7 +13,7 @@ export default function Banner() {
       }}
     >
       <img alt="Howard" src="/imgs/howard.png" width="280px" />
-      <Typography sx={{ textTransform: 'uppercase' }} variant="T88B">{`Hi, I’m Howard`}</Typography>
+      <Typography sx={{ textTransform: 'uppercase' }} variant="T64B">{`Hi, I’m Howard`}</Typography>
       <Typography sx={{ color: 'text.secondary', textTransform: 'uppercase' }} variant="T32B">
         Chief Technology Officer
       </Typography>
