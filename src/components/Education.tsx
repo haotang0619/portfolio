@@ -31,8 +31,8 @@ export default function Education() {
           </>,
         ]}
         period="2017 — 2021"
-        subtitle="Bachelor's degree, Computer Science"
-        title="National Taiwan University"
+        subtitle="National Taiwan University"
+        title="Bachelor's degree, Computer Science"
       />
     </Box>
   );

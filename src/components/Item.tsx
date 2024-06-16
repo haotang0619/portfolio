@@ -31,21 +31,22 @@ export default function Item({
       }}
     >
       <Grid
-        columnSpacing={6}
+        columnSpacing={4}
         container
         rowSpacing={2}
-        sx={{ margin: 'auto', maxWidth: '850px', width: '100%' }}
+        sx={{
+          left: '-32px',
+          margin: 'auto',
+          maxWidth: '850px',
+          position: 'relative',
+          width: '100%',
+        }}
       >
-        <Grid item md={5} sx={{ paddingLeft: '0 !important' }} xs={12}>
+        <Grid item md={4} xs={12}>
           <Typography variant="T32B">{period}</Typography>
         </Grid>
 
-        <Grid
-          item
-          md={7}
-          sx={{ paddingLeft: { md: '48px !important', xs: '0 !important' } }}
-          xs={12}
-        >
+        <Grid item md={8} xs={12}>
           <Typography variant="T32B">{title}</Typography>
           {!isHover ? (
             <Typography sx={{ marginTop: '16px' }} variant="T16M">

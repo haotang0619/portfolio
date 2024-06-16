@@ -1,5 +1,7 @@
 import About from '@/components/About';
 import Banner from '@/components/Banner';
+import Blog from '@/components/Blog';
+import Contact from '@/components/Contact';
 import CornerNavs from '@/components/CornerNavs';
 import Education from '@/components/Education';
 import Skill from '@/components/Skill';
@@ -14,6 +16,8 @@ export default function Home() {
       <Education />
       <Work />
       <Skill />
+      <Blog />
+      <Contact />
     </>
   );
 }

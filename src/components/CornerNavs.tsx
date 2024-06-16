@@ -22,7 +22,12 @@ export default function CornerNavs() {
   return (
     <>
       <Typography
-        sx={{ color: 'text.secondary', left: '36px', position: 'fixed', top: '24px' }}
+        sx={{
+          color: 'text.secondary',
+          left: { sm: '36px', xs: '24px' },
+          position: 'fixed',
+          top: '24px',
+        }}
         variant="T24B"
       >{`Hi, I’m Howard`}</Typography>
 
@@ -33,7 +38,7 @@ export default function CornerNavs() {
           flexFlow: 'column',
           gap: '8px',
           position: 'fixed',
-          right: '36px',
+          right: { sm: '36px', xs: '24px' },
           top: '24px',
         }}
       >
@@ -54,7 +59,7 @@ export default function CornerNavs() {
           display: 'flex',
           flexFlow: 'column',
           gap: '24px',
-          left: '36px',
+          left: { sm: '36px', xs: '24px' },
           position: 'fixed',
         }}
       >
@@ -67,7 +72,7 @@ export default function CornerNavs() {
         ))}
       </Box>
 
-      <Box sx={{ bottom: '24px', position: 'fixed', right: '36px' }}>
+      <Box sx={{ bottom: '24px', position: 'fixed', right: { sm: '36px', xs: '24px' } }}>
         <IconButton sx={{ color: '#FFFFFF' }}>
           <Moon variant="Bold" />
         </IconButton>
