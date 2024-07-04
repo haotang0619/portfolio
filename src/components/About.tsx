@@ -29,11 +29,11 @@ export default function About() {
           variant="T32S"
         >
           Hi! My name is Howard Tang or Hao Tang. I am a <span>Full Stack Web Developer</span> with
-          2-3 years of experience in frontend/backend development, able to develop websites from
+          3 years of experience in frontend/backend development, able to develop websites from
           scratch using <span>TypeScript</span>, particularly <span>Next.js</span> &{' '}
-          <span>NestJS</span>. Possess basic knowledge of <span>AWS</span> such as CloudFront,
-          DynamoDB, EKS, and more. Passionate about being an engineer and eager to become
-          increasingly versatile.
+          <span>NestJS</span>. Possess knowledge of <span>AWS</span> such as CloudFront, DynamoDB,
+          EKS, and more. Passionate about being an engineer and eager to become increasingly
+          versatile.
         </Typography>
       </Box>
     </Box>
