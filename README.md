@@ -1,5 +1,7 @@
 # Howard Tang - Portfolio
 
+> To view the live website, click [here](https://www.hao-tang.com/).
+
 ## Overview
 
 - ⚡️ [Next.js](https://nextjs.org/) 14
