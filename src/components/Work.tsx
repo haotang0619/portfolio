@@ -26,30 +26,53 @@ export default function Work() {
       <Item
         liItems={[
           <>
-            Develop <b>websites</b> and <b>backend APIs</b>.
+            Led the development of multiple products including{' '}
+            <b>
+              <a href="https://www.lum-i.com/" rel="noopener noreferrer" target="_blank">
+                Lumi
+              </a>
+            </b>
+            , a hotel booking platform for the Middle East market, implementing full-stack scalable
+            solutions with React.js and Node.js.
           </>,
           <>
-            Serve as a <b>CTO</b> to manage our engineering team.
+            <b>Led a cross-functional team</b> of 6 engineers, orchestrating collaboration between
+            mobile (Flutter), backend (Node.js) developers, UI/UX design, and QA to deliver
+            high-quality products.
+          </>,
+          <>
+            Established development <b>roadmaps</b> and <b>sprint planning</b>, defining milestones
+            and deliverables while ensuring optimal resource allocation and timely product launches.
+          </>,
+          <>
+            Implemented robust <b>code review</b> processes and <b>technical standards</b> for
+            <b>backend</b> development, enhancing code quality and maintaining architectural
+            integrity.
+          </>,
+          <>
+            Serve as an <b>interviewer</b> for most of our developer interviews.
           </>,
         ]}
         period="Feb. 2024 — Present"
         subtitle="BeyondBrain Corp."
-        title="CTO & Full Stack Engineer"
+        title="Interim CTO & Full Stack Engineer"
       />
 
       <Item
         liItems={[
+          <>Develop and maintain most of the company&apos;s website products, many from scratch.</>,
           <>
-            Develop <b>websites</b> and <b>backend APIs</b>.
+            Create an internal <b>UI framework library</b> for the company, based on Material UI.
           </>,
           <>
             Deploy web services on <b>AWS cloud services</b>.
           </>,
           <>
-            Create an internal <b>UI framework library</b> for the company, based on Material UI.
+            Serve as an <b>interviewer</b> for our web developer interviews.
           </>,
           <>
-            Serve as an <b>interviewer</b> for our web developer interview.
+            The company&apos;s first <b>full-stack engineer</b> and has been instrumental in
+            recruiting and establishing the team.
           </>,
         ]}
         period="Jun. 2021 — Feb. 2024"

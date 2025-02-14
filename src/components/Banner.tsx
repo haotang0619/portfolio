@@ -30,7 +30,7 @@ export default function Banner() {
         }}
         variant="T32B"
       >
-        Chief Technology Officer
+        Full-Stack Engineer
       </Typography>
 
       <Box

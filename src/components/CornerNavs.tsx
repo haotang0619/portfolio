@@ -101,7 +101,8 @@ export default function CornerNavs() {
       <Box
         sx={{ bottom: '24px', position: 'fixed', right: { sm: '36px', xs: '24px' }, zIndex: 1000 }}
       >
-        <IconButton sx={{ color: '#FFFFFF' }}>
+        {/* FIXME: Dark mode toggle (not yet implemented) */}
+        <IconButton sx={{ color: '#FFFFFF', display: 'none' }}>
           <Moon variant="Bold" />
         </IconButton>
       </Box>

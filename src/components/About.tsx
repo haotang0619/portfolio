@@ -26,14 +26,14 @@ export default function About() {
             lineHeight: { sm: '52px', xs: '34px' },
             maxWidth: '850px',
           }}
-          variant="T32S"
+          variant="T16S"
         >
-          Hi! My name is Howard Tang or Hao Tang. I am a <span>Full Stack Web Developer</span> with
-          3 years of experience in frontend/backend development, able to develop websites from
-          scratch using <span>TypeScript</span>, particularly <span>Next.js</span> &{' '}
-          <span>NestJS</span>. Possess knowledge of <span>AWS</span> such as CloudFront, DynamoDB,
-          EKS, and more. Passionate about being an engineer and eager to become increasingly
-          versatile.
+          Hi! My name is Howard Tang or Hao Tang. I am a <span>Full Stack Engineer</span> with 4+
+          years of expertise in <span>TypeScript</span>-based web development, specializing in{' '}
+          <span>Next.js</span> and <span>NestJS</span>. Proficient in <span>AWS</span> cloud
+          services for building scalable applications. Passionate about engineering excellence and
+          driven to architect scalable solutions while continuously expanding technical
+          capabilities.
         </Typography>
       </Box>
     </Box>

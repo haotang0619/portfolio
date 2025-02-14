@@ -58,17 +58,24 @@ export default function Item({
           >
             {title}
           </Typography>
-          {!isHover ? (
-            <Typography sx={{ marginTop: '16px' }} variant="T16M">
+
+          <Box sx={{ display: 'flex', flexFlow: isHover ? 'column-reverse' : 'column' }}>
+            <Typography
+              sx={{ marginTop: '16px', visibility: isHover ? 'hidden' : 'visible' }}
+              variant="T24M"
+            >
               {subtitle}
             </Typography>
-          ) : (
-            <Box component="ul" sx={{ paddingLeft: '16px' }}>
+
+            <Box
+              component="ul"
+              sx={{ paddingLeft: '16px', visibility: isHover ? 'visible' : 'hidden' }}
+            >
               {liItems.map((li, idx) => (
                 <li key={idx}>{li}</li>
               ))}
             </Box>
-          )}
+          </Box>
         </Grid>
       </Grid>
     </Box>
