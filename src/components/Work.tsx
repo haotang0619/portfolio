@@ -26,14 +26,14 @@ export default function Work() {
       <Item
         liItems={[
           <>
-            Led the development of multiple products including{' '}
+            Led development of multiple products, including{' '}
             <b>
-              <a href="https://www.lum-i.com/" rel="noopener noreferrer" target="_blank">
-                Lumi
+              <a href="https://www.fifthkeys.com/" rel="noopener noreferrer" target="_blank">
+                FifthKeys
               </a>
             </b>
-            , a hotel booking platform for the Middle East market, implementing full-stack scalable
-            solutions with React.js and Node.js.
+            , an AI-powered all-in-one Hospitality OS, implementing scalable full-stack solutions
+            with <b>React.js</b>, <b>Node.js</b>, and occasional <b>Python</b>.
           </>,
           <>
             <b>Led a cross-functional team</b> of 6 engineers, orchestrating collaboration between
@@ -45,7 +45,7 @@ export default function Work() {
             and deliverables while ensuring optimal resource allocation and timely product launches.
           </>,
           <>
-            Implemented robust <b>code review</b> processes and <b>technical standards</b> for
+            Implemented robust <b>code review</b> processes and technical standards for{' '}
             <b>backend</b> development, enhancing code quality and maintaining architectural
             integrity.
           </>,
@@ -60,7 +60,14 @@ export default function Work() {
 
       <Item
         liItems={[
-          <>Develop and maintain most of the company&apos;s website products, many from scratch.</>,
+          <>
+            The company&apos;s <b>first full-stack engineer</b> and has been instrumental in
+            recruiting and establishing the team.
+          </>,
+          <>
+            Develop and maintain <b>MixerBox ChatAI, MixerBox ID, MixerBox Pay</b>, and other
+            website products, many from scratch.
+          </>,
           <>
             Create an internal <b>UI framework library</b> for the company, based on Material UI.
           </>,
@@ -70,14 +77,10 @@ export default function Work() {
           <>
             Serve as an <b>interviewer</b> for our web developer interviews.
           </>,
-          <>
-            The company&apos;s first <b>full-stack engineer</b> and has been instrumental in
-            recruiting and establishing the team.
-          </>,
         ]}
         period="Jun. 2021 — Feb. 2024"
         subtitle="MixerBox"
-        title="Software Engineer"
+        title="Full-Stack Engineer"
       />
 
       <Box sx={{ maxWidth: '898px', padding: '0 24px', width: '100%' }}>
