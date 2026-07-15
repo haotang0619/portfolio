@@ -25,15 +25,17 @@ export default function Education() {
       <Item
         liItems={[
           <>
-            <b>Teaching Assistant</b> for the Algorithm class.
+            <b>Teaching Assistant</b> for Algorithms — designing and grading coursework and holding
+            office hours.
           </>,
           <>
-            <b>General Coordinator</b> of CSIE Camp.
+            <b>General Coordinator</b> of CSIE Camp, leading planning and execution of a
+            department-wide event.
           </>,
         ]}
-        period="2017 — 2021"
+        period="Sep. 2017 — May 2021"
         subtitle="National Taiwan University"
-        title="Bachelor's degree, Computer Science"
+        title="B.S. in Computer Science and Information Engineering"
       />
     </Box>
   );

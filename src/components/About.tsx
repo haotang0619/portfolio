@@ -28,13 +28,13 @@ export default function About() {
           }}
           variant="T16S"
         >
-          Hi! My name is Howard Tang or Hao Tang. I am a <span>Full-stack Engineer</span> with 5+
-          years of expertise in <span>TypeScript</span>-based web development, specializing in{' '}
-          <span>Next.js</span> and <span>NestJS</span>. Also experienced with{' '}
-          <span>Python FastAPI</span> for building lightweight backend services. Proficient in{' '}
-          <span>AWS</span> cloud services, including CloudFront, DynamoDB, ECS, Route53, RDS, and
-          more. Passionate about engineering excellence and driven to architect scalable solutions
-          while continuously expanding technical capabilities.
+          Hi! My name is Howard Tang or Hao Tang. I am a <span>Full-stack Engineer</span> with
+          startup founding experience, hands-on across <span>architecture</span>, backend
+          implementation, and <span>AI system design</span>. Experienced with{' '}
+          <span>TypeScript</span>-based web development across <span>Next.js</span> and{' '}
+          <span>NestJS</span>, plus <span>Python FastAPI</span> for backend services. Proficient in{' '}
+          <span>AWS</span> cloud services and building LLM-powered applications from planning layer
+          to production infrastructure.
         </Typography>
       </Box>
     </Box>

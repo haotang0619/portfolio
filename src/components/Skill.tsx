@@ -1,6 +1,14 @@
 import { Box, Typography } from '@mui/material';
 
-const skills = ['TypeScript', 'Node.Js (NestJS)', 'React.Js (Next.Js)', 'AWS'];
+const skills = [
+  'TypeScript',
+  'React.js (Next.js)',
+  'Node.js (NestJS)',
+  'FastAPI',
+  'PostgreSQL',
+  'AWS',
+  'LLM / AI Agents',
+];
 
 export default function Skill() {
   return (
