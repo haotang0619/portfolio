@@ -118,7 +118,17 @@ export default function Work() {
         title="IT Intern"
       />
 
-      <Box sx={{ maxWidth: '898px', padding: '0 24px', width: '100%' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexFlow: 'column',
+          gap: '16px',
+          marginTop: '32px',
+          maxWidth: '898px',
+          padding: '0 24px',
+          width: '100%',
+        }}
+      >
         <Typography
           onClick={() => window.open('/assets/docs/resume.pdf', '_blank', 'noopener')}
           sx={{
@@ -129,12 +139,29 @@ export default function Work() {
             display: 'flex',
             gap: '8px',
             letterSpacing: '2px',
-            marginTop: '32px',
             width: '100%',
           }}
           variant="T14B"
         >
           VIEW FULL RESUME
+          <ExportSquare size={18} />
+        </Typography>
+
+        <Typography
+          onClick={() => window.open('/assets/docs/portfolio.pdf', '_blank', 'noopener')}
+          sx={{
+            '&:hover': { textDecoration: 'underline' },
+            alignItems: 'center',
+            color: 'text.secondary',
+            cursor: 'pointer',
+            display: 'flex',
+            gap: '8px',
+            letterSpacing: '2px',
+            width: '100%',
+          }}
+          variant="T14B"
+        >
+          VIEW PORTFOLIO
           <ExportSquare size={18} />
         </Typography>
       </Box>
