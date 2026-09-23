@@ -7,10 +7,10 @@ import { Moon } from 'iconsax-react';
 
 const navItems = [
   { label: 'ABOUT' },
-  { label: 'EDUCATION' },
   { label: 'WORK' },
   { label: 'PROJECTS' },
   { label: 'SKILLS' },
+  { label: 'EDUCATION' },
   { label: 'FEATURED' },
   { label: 'CONTACT' },
 ];

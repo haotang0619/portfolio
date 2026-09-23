@@ -26,32 +26,12 @@ export default function Work() {
       <Item
         liItems={[
           <>
-            Co-founded BeyondBrain and led the development of{' '}
-            <b>Lumi, an AI travel planning platform</b>, transforming{' '}
-            <b>product concepts into production-ready features</b>, scaling to{' '}
-            <b>250K+ daily requests</b>, supporting hotel inventory for <b>1M+ properties</b>, and
-            helping secure <b>seed funding</b>.
+            Co-founded BeyondBrain, led the development of <b>Lumi</b> and designed the architecture
+            for <b>FifthKeys</b>, taking product concepts to production and helping secure{' '}
+            <b>seed funding</b>.
           </>,
           <>
-            Designed <b>Lumi&apos;s AI planning experience</b> by integrating an{' '}
-            <b>LLM-powered planning engine</b> with <b>deterministic validation workflows</b>,
-            delivering flexible travel recommendations, seamless booking experience, and accurate
-            pricing.
-          </>,
-          <>
-            Designed the architecture for{' '}
-            <b>
-              <a href="https://www.fifthkeys.com/" rel="noopener noreferrer" target="_blank">
-                FifthKeys
-              </a>
-              , a hospitality management platform
-            </b>
-            , enabling consistent management of <b>inventory, reservations, and pricing</b> across
-            channels with <b>event-driven architecture</b>, and increasing client hotel occupancy by{' '}
-            <b>20%+</b>.
-          </>,
-          <>
-            Grew and mentored a <b>cross-functional engineering team</b>, established engineering
+            Grew and mentored a cross-functional engineering team, established engineering
             practices, and hired <b>6 engineers</b>.
           </>,
         ]}
@@ -63,30 +43,14 @@ export default function Work() {
       <Item
         liItems={[
           <>
-            Owned the backend architecture and AI interaction workflows for <b>MixerBox ChatAI</b>,
-            improving <b>response reliability</b> and tool orchestration for production AI services
-            handling <b>2.4M+ daily requests</b> and <b>9,000 peak RPM</b>.
+            Joined as the company&apos;s <b>first full-stack engineer</b>, helping establish
+            engineering standards, interview processes, and scalable development practices as the
+            engineering organization grew.
           </>,
           <>
-            Built <b>high-concurrency purchasing workflows</b> for <b>MixerBox Pay</b>, a payment
-            and digital commerce platform, ensuring{' '}
-            <b>fair and reliable limited-quantity releases</b> by implementing transactional
-            safeguards that prevented overselling and race conditions during high-demand releases.
-          </>,
-          <>
-            Built authentication and identity management services that power <b>MixerBox ID</b>, a
-            centralized platform with <b>1M+ users</b>, simplifying <b>account management</b> across
-            multiple products.
-          </>,
-          <>
-            Maintained <b>production reliability</b> for large-scale consumer applications by
-            monitoring with AWS CloudWatch, responding to incidents, and providing{' '}
-            <b>on-call support</b>, minimizing <b>service disruptions</b>.
-          </>,
-          <>
-            Joined as the company&apos;s <b>first full-stack engineer</b>, helping establish{' '}
-            <b>engineering standards</b>, interview processes, and scalable development practices as
-            the engineering organization grew.
+            Built backend and AI services for <b>MixerBox ChatAI</b>, <b>Pay</b>, and <b>ID</b>, and
+            maintained production reliability through monitoring, incident response, and on-call
+            support.
           </>,
         ]}
         period="Jun. 2021 — Feb. 2024"
@@ -97,8 +61,8 @@ export default function Work() {
       <Item
         liItems={[
           <>
-            Built internal tooling and customer-facing web applications, including an{' '}
-            <b>IAM-inspired administration platform</b>, a custom CMS, and React applications.
+            Built internal tooling and customer-facing web applications, including an IAM-inspired
+            administration platform, a custom CMS, and React applications.
           </>,
         ]}
         period="Jul. 2020 — Feb. 2021"
@@ -109,9 +73,8 @@ export default function Work() {
       <Item
         liItems={[
           <>
-            Developed <b>operational dashboards</b> and reporting tools for <b>Taipower&apos;s</b>{' '}
-            internal operations team, improving visibility through <b>reliable data pipelines</b>{' '}
-            and analytics.
+            Developed operational dashboards and reporting tools for Taipower&apos;s internal
+            operations team, improving visibility through reliable data pipelines and analytics.
           </>,
         ]}
         period="Jul. 2019 — Jun. 2020"

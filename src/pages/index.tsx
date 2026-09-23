@@ -24,10 +24,10 @@ export default function Home() {
       >
         <Banner />
         <About />
-        <Education />
         <Work />
         <Projects />
         <Skill />
+        <Education />
         <Blog />
         <Contact />
       </Box>
