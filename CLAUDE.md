@@ -11,7 +11,8 @@ Personal portfolio site for Howard Tang (live at https://www.hao-tang.com/). Sin
 Package manager is npm (`package-lock.json`).
 
 - `npm run dev` — dev server at http://localhost:3000
-- `npm run build` — production build (also the only type check; there is no standalone `tsc` script)
+- `npm run build` — production build, including lint and type check
+- `npx tsc --noEmit` — type check only (no npm script for it)
 - `npm run build:analy` — build with `@next/bundle-analyzer` enabled (`ANALYZE=true`)
 - `npm run lint` — runs Prettier **with `--write`** on `src/**` and root config files, then `eslint --fix`. It modifies files.
 
@@ -25,17 +26,18 @@ Husky runs on commit:
 
 ## Architecture
 
-- `src/pages/_app.tsx` wraps everything in the MUI `ThemeProvider` and `GlobalCSS`; `src/pages/index.tsx` is the only page and stacks the section components (`Banner`, `About`, `Education`, `Work`, `Skill`, `Blog`, `Contact`) plus the fixed `CornerNavs`.
-- Each section in `src/components/` owns its own content. `Item.tsx` is the shared row component (period / title / subtitle / bullet list with hover highlight) used by `Education` and `Work`; bullet content is passed as `ReactNode[]` with inline `<b>`/`<a>`.
-- Section headings carry an uppercase `id` (e.g. `id="WORK"`) used as in-page anchors.
-- Static files: `public/imgs/` for images, `public/assets/docs/` for `resume.pdf` and `portfolio.pdf` (opened from `Work.tsx`). Updating the resume/portfolio means replacing these PDFs.
+- `src/pages/_app.tsx` wraps everything in the MUI `ThemeProvider` and `GlobalCSS`, and holds the site-wide `<head>` (title, description, Open Graph tags).
+- `src/pages/index.tsx` is the only page. Its `sections` array is the single source of truth for section order **and** the corner navigation: each entry is `{ Component, label? }`, and `label` must equal the uppercase `id` on that section's heading (e.g. `id="WORK"`), which nav clicks scroll to. Adding, removing, or reordering a section means editing this array (and giving the section a matching heading `id`). The heading label shown on the page may differ from the component name (`Skill` → `SKILLS`, `Blog` → `FEATURED`).
+- Scroll focus: `index.tsx` wraps each section in a `Box` and tracks the active one (the last section whose top has passed `min(innerHeight / 3, 300px)`, or the last section at page bottom). Inactive sections are dimmed via opacity. The same active label is passed to `CornerNavs` to highlight the nav, so `CornerNavs` has no scroll logic of its own. Section vertical padding is applied from `index.tsx` via `'& > div > div'`, overriding each section's own padding.
+- Each section in `src/components/` owns its own content as hard-coded JSX or a local data array (`Projects`, `Skill`, `Blog`, `Contact`). `Item.tsx` is the shared static row (period / title / organization / bullet list, no hover effects) used by `Work` and `Education`; bullets are `ReactNode[]` with inline `<b>`. `Projects` holds the per-project details and metrics, so `Work` intentionally stays brief rather than repeating them.
+- Static files: `public/imgs/` for images (project screenshots in `public/imgs/projects/`), `public/assets/docs/` for `resume.pdf` (linked from `Banner` and `Work`) and `portfolio.pdf` (linked from `Projects` as "View Project Deck"). Updating them means replacing these PDFs; the browser tab title comes from the PDF's metadata `/Title` (currently `Howard Tang - Resume` / `Howard Tang - Project Deck`), so re-set it on a new file.
 
 ### Theme / typography system (`src/theme/`)
 
 - Custom MUI Typography variants named `T{size}{weight}`, e.g. `T32B`, `T14R`. Sizes: 88, 64, 32, 24, 16, 14. Weights: `B`=700, `S`=600, `M`=500, `R`=400.
 - `util.ts` defines the variant list (`textHierarchy`) and size → font-size/line-height mapping; `theme/index.tsx` generates the style overrides from it; `type.ts` augments MUI's TypeScript types so the variants type-check. Adding a new size/weight requires updating all three.
 - Font weights resolve through CSS variables (`--weight-B` etc.) injected globally from `fontVariables.tsx` via `GlobalCSS.tsx`.
-- Palette: primary `#EB5939`, text white / `#FFFFFF73` (secondary). Font family is Poppins.
+- Palette: primary `#EB5939`, text white / `#FFFFFFA6` (secondary). Background `#0D0D0D` (`globals.css`). Font family is Poppins.
 
 ## Code style
 
