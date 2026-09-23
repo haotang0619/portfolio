@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
+import { ReactNode, useState } from 'react';
 
-import { Box, Typography } from '@mui/material';
+import { Box, Dialog, Typography } from '@mui/material';
 import { ExportSquare } from 'iconsax-react';
 
 const projects: {
@@ -88,6 +88,10 @@ const projects: {
 ];
 
 export default function Projects() {
+  // Kept separately from `isZoomOpen` so the image stays rendered during the dialog's close fade.
+  const [zoomed, setZoomed] = useState<{ alt: string; src: string }>(null);
+  const [isZoomOpen, setIsZoomOpen] = useState(false);
+
   return (
     <Box
       sx={{
@@ -129,11 +133,27 @@ export default function Projects() {
           >
             <Box sx={{ flex: { md: '0 0 40%' } }}>
               <Box
+                aria-label={`Enlarge ${name} screenshot`}
+                component="button"
+                onClick={() => {
+                  setZoomed({ alt: `${name} screenshot`, src });
+                  setIsZoomOpen(true);
+                }}
                 sx={{
+                  '& img': {
+                    '@media (prefers-reduced-motion: reduce)': { transition: 'none' },
+                    transition: 'transform 0.4s ease',
+                  },
+                  '&:hover img': { transform: 'scale(1.05)' },
                   aspectRatio: '16 / 10',
                   bgcolor: '#FFFFFF',
+                  border: 'none',
                   borderRadius: '8px',
+                  cursor: 'zoom-in',
+                  display: 'block',
                   overflow: 'hidden',
+                  padding: 0,
+                  width: '100%',
                 }}
               >
                 <img
@@ -147,7 +167,11 @@ export default function Projects() {
 
             <Box sx={{ flex: 1 }}>
               <Typography
-                sx={{ color: 'primary.main', letterSpacing: '2px', textTransform: 'uppercase' }}
+                sx={{
+                  color: 'primary.main',
+                  letterSpacing: '2px',
+                  textTransform: 'uppercase',
+                }}
                 variant="T14B"
               >
                 {company}
@@ -216,6 +240,29 @@ export default function Projects() {
           <ExportSquare size={18} />
         </Typography>
       </Box>
+
+      <Dialog
+        PaperProps={{ sx: { bgcolor: 'transparent', boxShadow: 'none', margin: '16px' } }}
+        maxWidth={false}
+        onClose={() => setIsZoomOpen(false)}
+        open={isZoomOpen}
+        sx={{ '& .MuiBackdrop-root': { bgcolor: '#000000D9' } }}
+      >
+        {zoomed && (
+          <img
+            alt={zoomed.alt}
+            onClick={() => setIsZoomOpen(false)}
+            src={zoomed.src}
+            style={{
+              borderRadius: '8px',
+              cursor: 'zoom-out',
+              display: 'block',
+              maxHeight: '90vh',
+              maxWidth: '90vw',
+            }}
+          />
+        )}
+      </Dialog>
     </Box>
   );
 }
