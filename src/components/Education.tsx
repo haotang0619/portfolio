@@ -38,6 +38,7 @@ export default function Education() {
             department-wide event.
           </>,
         ]}
+        logo="/imgs/education/ntu.jpeg"
         period="Sep. 2017 — May 2021"
         subtitle="National Taiwan University"
         title="B.S. in Computer Science and Information Engineering"

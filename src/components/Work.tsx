@@ -40,6 +40,7 @@ export default function Work() {
             practices, and hired <b>6 engineers</b>.
           </>,
         ]}
+        logo="/imgs/work/beyondbrain.png"
         period="Feb. 2024 — Jun. 2026"
         subtitle="BeyondBrain"
         title="Co-Founder & Full-Stack Engineer"
@@ -58,6 +59,7 @@ export default function Work() {
             support.
           </>,
         ]}
+        logo="/imgs/work/mixerbox.jpeg"
         period="Jun. 2021 — Feb. 2024"
         subtitle="MixerBox"
         title="Full-Stack Engineer"
@@ -70,6 +72,7 @@ export default function Work() {
             administration platform, a custom CMS, and React applications.
           </>,
         ]}
+        logo="/imgs/work/funpodium.jpeg"
         period="Jul. 2020 — Feb. 2021"
         subtitle="Funpodium"
         title="IT Intern"
