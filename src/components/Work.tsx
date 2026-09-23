@@ -36,8 +36,8 @@ export default function Work() {
         liItems={t({
           en: [
             <>
-              Co-founded BeyondBrain, led the development of <b>Lumi</b> and designed the
-              architecture for <b>FifthKeys</b>, taking product concepts to production and helping
+              Co-founded BeyondBrain, leading development and system architecture for both{' '}
+              <b>Lumi</b> and <b>FifthKeys</b>, taking product concepts to production and helping
               secure <b>seed funding</b>.
             </>,
             <>
@@ -47,8 +47,8 @@ export default function Work() {
           ],
           'zh-TW': [
             <>
-              共同創辦 BeyondBrain，主導 <b>Lumi</b> 開發並設計 <b>FifthKeys</b>{' '}
-              的系統架構，將產品概念推進至正式上線，並協助取得<b>種子輪融資</b>。
+              共同創辦 BeyondBrain，主導 <b>Lumi</b> 與 <b>FifthKeys</b>{' '}
+              的開發與系統架構設計，將產品概念推進至正式上線，並協助取得<b>種子輪融資</b>。
             </>,
             <>
               組建並帶領跨職能工程團隊，建立工程實踐，並招募 <b>6 名工程師</b>。
@@ -70,9 +70,9 @@ export default function Work() {
               engineering organization grew.
             </>,
             <>
-              Built backend and AI services for <b>MixerBox ChatAI</b>, <b>Pay</b>, and <b>ID</b>,
-              and maintained production reliability through monitoring, incident response, and
-              on-call support.
+              Built frontend, backend, and AI services for <b>MixerBox ChatAI</b>, <b>Pay</b>, and{' '}
+              <b>ID</b>, and maintained production reliability through monitoring, incident
+              response, and on-call support.
             </>,
           ],
           'zh-TW': [
@@ -81,7 +81,7 @@ export default function Work() {
               的身分加入，隨工程組織成長，協助建立工程規範、面試流程與可擴展的開發實踐。
             </>,
             <>
-              為 <b>MixerBox ChatAI</b>、<b>Pay</b> 與 <b>ID</b> 打造後端與 AI
+              為 <b>MixerBox ChatAI</b>、<b>Pay</b> 與 <b>ID</b> 打造前後端與 AI
               服務，並透過監控、事故應變與 on-call 維護正式環境的穩定性。
             </>,
           ],

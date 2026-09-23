@@ -47,7 +47,7 @@ export default function Banner() {
           }}
           variant="T64B"
         >
-          {t({ en: 'Hi, I’m Howard', 'zh-TW': '嗨，我是 Howard' })}
+          {t({ en: 'Hi, I’m Howard', 'zh-TW': '嗨，我是唐浩' })}
         </Typography>
         <Typography
           sx={{
@@ -60,7 +60,7 @@ export default function Banner() {
           {t({ en: 'Full-Stack Engineer', 'zh-TW': '全端工程師' })}
         </Typography>
         <Typography
-          sx={{ color: 'primary.main', letterSpacing: '2px', marginTop: '8px' }}
+          sx={{ color: 'primary.main', letterSpacing: '2px', marginTop: '20px' }}
           variant="T14B"
         >
           {t({

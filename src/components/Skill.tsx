@@ -29,9 +29,14 @@ const skillGroups: { label: Localized<string>; skills: Localized<string[]> | str
         'LLM-powered applications',
         'AI workflow design',
         'AI agents',
-        'AI-assisted dev (Cursor)',
+        'AI-assisted dev (Claude Code, Cursor)',
       ],
-      'zh-TW': ['LLM 應用開發', 'AI 工作流程設計', 'AI Agents', 'AI 輔助開發（Cursor）'],
+      'zh-TW': [
+        'LLM 應用開發',
+        'AI 工作流程設計',
+        'AI Agents',
+        'AI 輔助開發（Claude Code、Cursor）',
+      ],
     },
   },
   {

@@ -74,7 +74,7 @@ export default function CornerNavs({
       scroll={false}
       sx={{ ...iconButtonSx, height: '40px', width: '40px' }}
     >
-      <Typography sx={{ color: 'inherit' }} variant="T14B">
+      <Typography sx={{ color: 'inherit' }} variant="T16B">
         {t({ en: '中', 'zh-TW': 'EN' })}
       </Typography>
     </IconButton>
@@ -93,7 +93,7 @@ export default function CornerNavs({
       sx={{ color: 'text.secondary', fontSize: { md: '24px', xs: '20px' } }}
       variant="T24B"
     >
-      {t({ en: 'Hi, I’m Howard', 'zh-TW': '嗨，我是 Howard' })}
+      {t({ en: 'Hi, I’m Howard', 'zh-TW': '嗨，我是唐浩' })}
     </Typography>
   );
 

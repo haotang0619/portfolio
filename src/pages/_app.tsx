@@ -11,12 +11,12 @@ import { LOCALES, Localized, useLocale } from '@/utils/i18n';
 const siteUrl = 'https://www.hao-tang.com';
 const localeUrl = (locale: string) => (locale === LOCALES[0] ? siteUrl : `${siteUrl}/${locale}`);
 const titles: Localized<string> = {
-  en: 'Howard Tang - Portfolio',
-  'zh-TW': 'Howard Tang - 個人作品集',
+  en: 'Howard Tang - Full-Stack Engineer',
+  'zh-TW': '唐浩 Howard Tang - 全端工程師',
 };
 const descriptions: Localized<string> = {
-  en: 'Full-stack engineer with startup founding experience, hands-on across architecture, backend implementation, and AI system design.',
-  'zh-TW': '具新創共同創辦經驗的全端工程師，實際參與系統架構、後端開發與 AI 系統設計。',
+  en: 'Full-stack engineer with startup founding experience, hands-on across system architecture, frontend and backend development, and AI system design.',
+  'zh-TW': '具新創共同創辦經驗的全端工程師，實際參與系統架構、前後端開發與 AI 系統設計。',
 };
 
 export default function App({ Component, pageProps }: AppProps) {

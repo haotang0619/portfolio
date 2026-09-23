@@ -39,7 +39,7 @@ export default function Education() {
               holding office hours.
             </>,
             <>
-              <b>General Coordinator</b> of CSIE Camp, leading planning and execution of a
+              <b>General Coordinator</b> of NTU CSIE Camp, leading planning and execution of a
               department-wide event.
             </>,
           ],
@@ -48,7 +48,7 @@ export default function Education() {
               擔任演算法課程<b>助教</b>，負責設計與批改作業，並主持 office hours。
             </>,
             <>
-              擔任資工營<b>總召</b>，統籌全系規模活動的規劃與執行。
+              擔任臺大資訊營<b>總召</b>，統籌全系規模活動的規劃與執行。
             </>,
           ],
         })}
