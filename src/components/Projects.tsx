@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 
 import { Box, Typography } from '@mui/material';
+import { ExportSquare } from 'iconsax-react';
 
 const projects: {
   challenge: ReactNode;
@@ -189,6 +190,26 @@ export default function Projects() {
             </Box>
           </Box>
         ))}
+      </Box>
+
+      <Box sx={{ marginTop: '32px', maxWidth: '850px', width: '100%' }}>
+        <Typography
+          onClick={() => window.open('/assets/docs/portfolio.pdf', '_blank', 'noopener')}
+          sx={{
+            '&:hover': { textDecoration: 'underline' },
+            alignItems: 'center',
+            color: 'text.secondary',
+            cursor: 'pointer',
+            display: 'flex',
+            gap: '8px',
+            letterSpacing: '2px',
+            width: '100%',
+          }}
+          variant="T14B"
+        >
+          VIEW PROJECT DECK (PDF)
+          <ExportSquare size={18} />
+        </Typography>
       </Box>
     </Box>
   );

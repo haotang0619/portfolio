@@ -110,24 +110,6 @@ export default function Work() {
           VIEW FULL RESUME
           <ExportSquare size={18} />
         </Typography>
-
-        <Typography
-          onClick={() => window.open('/assets/docs/portfolio.pdf', '_blank', 'noopener')}
-          sx={{
-            '&:hover': { textDecoration: 'underline' },
-            alignItems: 'center',
-            color: 'text.secondary',
-            cursor: 'pointer',
-            display: 'flex',
-            gap: '8px',
-            letterSpacing: '2px',
-            width: '100%',
-          }}
-          variant="T14B"
-        >
-          VIEW PORTFOLIO
-          <ExportSquare size={18} />
-        </Typography>
       </Box>
     </Box>
   );
