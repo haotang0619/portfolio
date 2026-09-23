@@ -170,13 +170,16 @@ export default function Projects() {
                 sx={{
                   color: 'primary.main',
                   letterSpacing: '2px',
+                  marginBottom: '8px',
                   textTransform: 'uppercase',
                 }}
                 variant="T14B"
               >
                 {company}
               </Typography>
-              <Typography variant="T24B">{name}</Typography>
+              <Typography sx={{ marginBottom: '6px' }} variant="T24B">
+                {name}
+              </Typography>
               <Typography sx={{ color: '#FFFFFFCC', marginBottom: '16px' }} variant="T14M">
                 {tagline}
               </Typography>
