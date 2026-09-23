@@ -22,11 +22,11 @@ export default function Blog() {
     >
       <Box sx={{ maxWidth: '850px', width: '100%' }}>
         <Typography
-          id="BLOG"
+          id="FEATURED"
           sx={{ color: 'text.secondary', marginBottom: '32px', width: '100%' }}
           variant="T14B"
         >
-          BLOG
+          FEATURED
         </Typography>
       </Box>
 
