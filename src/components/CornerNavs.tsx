@@ -51,7 +51,12 @@ export default function CornerNavs({
                 top: document.getElementById(label).offsetTop - 48,
               });
             }}
-            sx={{ color: activeLabel === label ? '#FFFFFF' : 'text.secondary', cursor: 'pointer' }}
+            sx={{
+              '&:hover': { color: '#FFFFFF' },
+              color: activeLabel === label ? '#FFFFFF' : '#FFFFFF66',
+              cursor: 'pointer',
+              transition: 'color 0.2s',
+            }}
             variant="T14M"
           >
             {label}
@@ -72,7 +77,13 @@ export default function CornerNavs({
       >
         {socialItems.map(({ href, icon }) => (
           <a href={href} key={href} rel="noreferrer" target="_blank">
-            <IconButton sx={{ color: 'text.secondary' }}>
+            <IconButton
+              sx={{
+                '&:hover': { bgcolor: 'transparent', color: 'primary.main' },
+                color: 'text.secondary',
+                transition: 'color 0.2s',
+              }}
+            >
               <FontAwesomeIcon icon={icon} />
             </IconButton>
           </a>
