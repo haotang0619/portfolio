@@ -39,6 +39,9 @@ const iconButtonSx = {
   transition: 'color 0.2s',
 };
 
+// Toggles and menu buttons share one square box so they line up regardless of their icon size.
+const squareButtonSx = { ...iconButtonSx, height: '40px', width: '40px' };
+
 // Desktop (md+): name top-left, nav top-right, socials bottom-left, language and scheme toggles
 // bottom-right. Below md: a fixed top bar with the name, both toggles, and a menu that holds nav
 // and socials.
@@ -74,7 +77,7 @@ export default function CornerNavs({
           : t({ en: 'Switch to light mode', 'zh-TW': '切換至淺色模式' })
       }
       onClick={toggleColorScheme}
-      sx={iconButtonSx}
+      sx={squareButtonSx}
     >
       {isLight ? <Moon size={24} variant="Bold" /> : <Sun1 size={24} variant="Bold" />}
     </IconButton>
@@ -88,7 +91,7 @@ export default function CornerNavs({
       href="/"
       locale={locale === 'en' ? 'zh-TW' : 'en'}
       scroll={false}
-      sx={{ ...iconButtonSx, height: '40px', width: '40px' }}
+      sx={squareButtonSx}
     >
       <Typography sx={{ color: 'inherit' }} variant="T16B">
         {t({ en: '中', 'zh-TW': 'EN' })}
@@ -99,7 +102,7 @@ export default function CornerNavs({
   const socialLinks = socialItems.map(({ href, icon }) => (
     <a href={href} key={href} rel="noreferrer" target="_blank">
       <IconButton sx={iconButtonSx}>
-        <FontAwesomeIcon icon={icon} />
+        <FontAwesomeIcon fixedWidth icon={icon} />
       </IconButton>
     </a>
   ));
@@ -213,7 +216,7 @@ export default function CornerNavs({
           <IconButton
             aria-label={t({ en: 'Open menu', 'zh-TW': '開啟選單' })}
             onClick={() => setIsMenuOpen(true)}
-            sx={iconButtonSx}
+            sx={squareButtonSx}
           >
             <HambergerMenu size={24} />
           </IconButton>
@@ -246,7 +249,7 @@ export default function CornerNavs({
           <IconButton
             aria-label={t({ en: 'Close menu', 'zh-TW': '關閉選單' })}
             onClick={() => setIsMenuOpen(false)}
-            sx={iconButtonSx}
+            sx={squareButtonSx}
           >
             <Add size={28} style={{ transform: 'rotate(45deg)' }} />
           </IconButton>
