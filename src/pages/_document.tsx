@@ -7,7 +7,7 @@ const applySavedColorScheme = `if (localStorage.getItem('${COLOR_SCHEME_STORAGE_
 
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html>
       <Head />
       <body>
         <script dangerouslySetInnerHTML={{ __html: applySavedColorScheme }} />

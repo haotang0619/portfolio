@@ -46,8 +46,11 @@ const sizeMapping: Record<
 };
 export type TextWeight = 'B' | 'M' | 'R' | 'S';
 
+// Poppins has no CJK glyphs, so Chinese text falls back to Noto Sans TC (both loaded in globals.css).
+export const FONT_FAMILY = "Poppins, 'Noto Sans TC', sans-serif";
+
 export const textStyle = (size: TextSize, weight = 'R' as TextWeight) => ({
-  fontFamily: 'Poppins',
+  fontFamily: FONT_FAMILY,
   fontStyle: 'normal',
   fontWeight: `var(--weight-${weight})`,
   ...sizeMapping[size],

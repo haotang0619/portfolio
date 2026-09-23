@@ -3,6 +3,7 @@ import { ArrowDown } from 'iconsax-react';
 
 import { colors } from '@/theme/colorVariables';
 import { textStyle } from '@/theme/util';
+import { useLocale } from '@/utils/i18n';
 import { scrollToSection } from '@/utils/scrollToSection';
 
 const buttonSx = {
@@ -15,6 +16,8 @@ const buttonSx = {
 };
 
 export default function Banner() {
+  const { t } = useLocale();
+
   return (
     <Box
       sx={{
@@ -43,7 +46,9 @@ export default function Banner() {
             textTransform: 'uppercase',
           }}
           variant="T64B"
-        >{`Hi, I’m Howard`}</Typography>
+        >
+          {t({ en: 'Hi, I’m Howard', 'zh-TW': '嗨，我是 Howard' })}
+        </Typography>
         <Typography
           sx={{
             color: 'text.secondary',
@@ -52,13 +57,16 @@ export default function Banner() {
           }}
           variant="T32B"
         >
-          Full-Stack Engineer
+          {t({ en: 'Full-Stack Engineer', 'zh-TW': '全端工程師' })}
         </Typography>
         <Typography
           sx={{ color: 'primary.main', letterSpacing: '2px', marginTop: '8px' }}
           variant="T14B"
         >
-          AI SYSTEMS • DISTRIBUTED BACKEND • PRODUCT ARCHITECTURE
+          {t({
+            en: 'AI SYSTEMS • DISTRIBUTED BACKEND • PRODUCT ARCHITECTURE',
+            'zh-TW': 'AI 系統 • 分散式後端 • 產品架構',
+          })}
         </Typography>
       </Box>
 
@@ -70,7 +78,7 @@ export default function Banner() {
           sx={{ ...buttonSx, bgcolor: 'primary.main', color: '#0D0D0D' }}
           target="_blank"
         >
-          RESUME
+          {t({ en: 'RESUME', 'zh-TW': '履歷' })}
         </Box>
         <Box
           component="a"
@@ -81,7 +89,7 @@ export default function Banner() {
           }}
           sx={{ ...buttonSx, border: `1px solid ${colors.text}`, color: colors.text }}
         >
-          CONTACT
+          {t({ en: 'CONTACT', 'zh-TW': '聯絡我' })}
         </Box>
       </Box>
 

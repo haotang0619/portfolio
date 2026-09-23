@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 
 import { colors } from './colorVariables';
-import { TextSize, TextWeight, textHierarchy, textStyle } from './util';
+import { FONT_FAMILY, TextSize, TextWeight, textHierarchy, textStyle } from './util';
 
 // Create a theme instance.
 export const theme = createTheme({
@@ -26,5 +26,5 @@ export const theme = createTheme({
     primary: { main: '#EB5939' },
     text: { primary: colors.text, secondary: colors.textSecondary },
   },
-  typography: { fontFamily: 'Poppins' }, // This changes all MUI components
+  typography: { fontFamily: FONT_FAMILY }, // This changes all MUI components
 });

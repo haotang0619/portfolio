@@ -1,18 +1,21 @@
 import { Box, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 
 import { colors } from '@/theme/colorVariables';
+import { useLocale } from '@/utils/i18n';
 
 const blogs = [
   {
-    date: 'Oct 6, 2022',
+    date: { en: 'Oct 6, 2022', 'zh-TW': '2022 年 10 月 6 日' },
     src: '/imgs/blog/1.webp',
-    time: '7 min read',
+    time: { en: '7 min read', 'zh-TW': '閱讀時間 7 分鐘' },
     title: '他 23 歲月領 14 萬！ MixerBox 如何煉就超狂全端開發者，讓新鮮人就能主導新產品線開發？',
     url: 'https://medium.com/mixerboxinc/howard-tang-9c1fc93f38ee',
   },
 ];
 
 export default function Blog() {
+  const { t } = useLocale();
+
   return (
     <Box
       sx={{
@@ -33,7 +36,7 @@ export default function Blog() {
           }}
           variant="T14B"
         >
-          FEATURED
+          {t({ en: 'FEATURED', 'zh-TW': '人物專訪' })}
         </Typography>
       </Box>
 
@@ -71,11 +74,11 @@ export default function Blog() {
 
                 <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
                   <Typography color="text.secondary" variant="T14M">
-                    {date}
+                    {t(date)}
                   </Typography>
 
                   <Typography color="text.secondary" variant="T14M">
-                    {time}
+                    {t(time)}
                   </Typography>
                 </Box>
               </CardContent>

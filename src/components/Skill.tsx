@@ -1,13 +1,20 @@
 import { Box, Typography } from '@mui/material';
 
 import { colors } from '@/theme/colorVariables';
+import { Localized, useLocale } from '@/utils/i18n';
 
-const skillGroups = [
-  { label: 'Programming', skills: ['TypeScript', 'JavaScript', 'Python', 'SQL', 'C++'] },
-  { label: 'Frontend & Backend', skills: ['React.js', 'Next.js', 'Node.js', 'NestJS', 'FastAPI'] },
-  { label: 'Database', skills: ['PostgreSQL', 'DynamoDB', 'MongoDB'] },
+const skillGroups: { label: Localized<string>; skills: Localized<string[]> | string[] }[] = [
   {
-    label: 'Cloud & DevOps',
+    label: { en: 'Programming', 'zh-TW': '程式語言' },
+    skills: ['TypeScript', 'JavaScript', 'Python', 'SQL', 'C++'],
+  },
+  {
+    label: { en: 'Frontend & Backend', 'zh-TW': '前端與後端' },
+    skills: ['React.js', 'Next.js', 'Node.js', 'NestJS', 'FastAPI'],
+  },
+  { label: { en: 'Database', 'zh-TW': '資料庫' }, skills: ['PostgreSQL', 'DynamoDB', 'MongoDB'] },
+  {
+    label: { en: 'Cloud & DevOps', 'zh-TW': '雲端與 DevOps' },
     skills: [
       'AWS (ECS, EKS, RDS, DynamoDB, CloudFront, Route53, CloudWatch)',
       'Docker',
@@ -16,18 +23,29 @@ const skillGroups = [
     ],
   },
   {
-    label: 'AI & Product',
-    skills: [
-      'LLM-powered applications',
-      'AI workflow design',
-      'AI agents',
-      'AI-assisted dev (Cursor)',
-    ],
+    label: { en: 'AI & Product', 'zh-TW': 'AI 與產品' },
+    skills: {
+      en: [
+        'LLM-powered applications',
+        'AI workflow design',
+        'AI agents',
+        'AI-assisted dev (Cursor)',
+      ],
+      'zh-TW': ['LLM 應用開發', 'AI 工作流程設計', 'AI Agents', 'AI 輔助開發（Cursor）'],
+    },
   },
-  { label: 'Spoken', skills: ['English (Professional)', 'Mandarin (Native)'] },
+  {
+    label: { en: 'Spoken', 'zh-TW': '語言' },
+    skills: {
+      en: ['English (Professional)', 'Mandarin (Native)'],
+      'zh-TW': ['英文（專業工作能力）', '中文（母語）'],
+    },
+  },
 ];
 
 export default function Skill() {
+  const { t } = useLocale();
+
   return (
     <Box
       sx={{
@@ -48,7 +66,7 @@ export default function Skill() {
           }}
           variant="T14B"
         >
-          SKILLS
+          {t({ en: 'SKILLS', 'zh-TW': '技能' })}
         </Typography>
       </Box>
 
@@ -57,7 +75,7 @@ export default function Skill() {
       >
         {skillGroups.map(({ label, skills }) => (
           <Box
-            key={label}
+            key={label.en}
             sx={{
               columnGap: '32px',
               display: 'grid',
@@ -74,11 +92,11 @@ export default function Skill() {
               }}
               variant="T14B"
             >
-              {label}
+              {t(label)}
             </Typography>
 
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              {skills.map((skill) => (
+              {(Array.isArray(skills) ? skills : t(skills)).map((skill) => (
                 <Box
                   key={skill}
                   sx={{

@@ -11,21 +11,22 @@ import Education from '@/components/Education';
 import Projects from '@/components/Projects';
 import Skill from '@/components/Skill';
 import Work from '@/components/Work';
+import { Localized, useLocale } from '@/utils/i18n';
 
-// `label` must match the section heading id; it is also shown in the corner navigation.
-const sections: { Component: () => JSX.Element; label?: string }[] = [
+// `id` must match the section heading id; `label` is shown for it in the corner navigation.
+const sections: { Component: () => JSX.Element; id?: string; label?: Localized<string> }[] = [
   { Component: Banner },
-  { Component: About, label: 'ABOUT' },
-  { Component: Work, label: 'WORK' },
-  { Component: Projects, label: 'PROJECTS' },
-  { Component: Skill, label: 'SKILLS' },
-  { Component: Education, label: 'EDUCATION' },
-  { Component: Blog, label: 'FEATURED' },
-  { Component: Contact, label: 'CONTACT' },
+  { Component: About, id: 'ABOUT', label: { en: 'ABOUT', 'zh-TW': '關於' } },
+  { Component: Work, id: 'WORK', label: { en: 'WORK', 'zh-TW': '經歷' } },
+  { Component: Projects, id: 'PROJECTS', label: { en: 'PROJECTS', 'zh-TW': '專案' } },
+  { Component: Skill, id: 'SKILLS', label: { en: 'SKILLS', 'zh-TW': '技能' } },
+  { Component: Education, id: 'EDUCATION', label: { en: 'EDUCATION', 'zh-TW': '學歷' } },
+  { Component: Blog, id: 'FEATURED', label: { en: 'FEATURED', 'zh-TW': '專訪' } },
+  { Component: Contact, id: 'CONTACT', label: { en: 'CONTACT', 'zh-TW': '聯絡' } },
 ];
-const navLabels = sections.map(({ label }) => label).filter(Boolean);
 
 export default function Home() {
+  const { t } = useLocale();
   const sectionRefs = useRef<HTMLDivElement[]>([]);
   const [activeIdx, setActiveIdx] = useState(0);
 
@@ -56,7 +57,10 @@ export default function Home() {
 
   return (
     <>
-      <CornerNavs activeLabel={sections[activeIdx].label} labels={navLabels} />
+      <CornerNavs
+        activeId={sections[activeIdx].id}
+        items={sections.filter(({ id }) => id).map(({ id, label }) => ({ id, label: t(label) }))}
+      />
       <Box
         sx={{
           '& > div > div': {

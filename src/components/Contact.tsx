@@ -2,6 +2,7 @@ import { Box, Grid, Typography } from '@mui/material';
 import { ArrowRight2 } from 'iconsax-react';
 
 import { colors } from '@/theme/colorVariables';
+import { useLocale } from '@/utils/i18n';
 
 const contactItems = [
   { href: 'https://www.facebook.com/haotang0619/', text: 'Facebook' },
@@ -11,6 +12,8 @@ const contactItems = [
 ];
 
 export default function Contact() {
+  const { t } = useLocale();
+
   return (
     <Box
       sx={{
@@ -31,7 +34,7 @@ export default function Contact() {
           }}
           variant="T14B"
         >
-          CONTACT
+          {t({ en: 'CONTACT', 'zh-TW': '聯絡方式' })}
         </Typography>
       </Box>
 
@@ -79,7 +82,7 @@ export default function Contact() {
         <Grid item md={4} xs={12}>
           <Box sx={{ marginBottom: '60px' }}>
             <Typography sx={{ color: 'text.secondary', marginBottom: '4px' }} variant="T16M">
-              Email
+              {t({ en: 'Email', 'zh-TW': '電子郵件' })}
             </Typography>
             <Typography sx={{ '& > a': { color: colors.text } }} variant="T14M">
               <a href="mailto:haotang.tw@gmail.com">haotang.tw@gmail.com</a>
@@ -88,7 +91,7 @@ export default function Contact() {
 
           <Box sx={{ marginBottom: '60px' }}>
             <Typography sx={{ color: 'text.secondary', marginBottom: '4px' }} variant="T16M">
-              Phone
+              {t({ en: 'Phone', 'zh-TW': '電話' })}
             </Typography>
             <Typography sx={{ '& > a': { color: colors.text } }} variant="T14M">
               <a href="tel:+886953573473">+886 953-573-473</a>
