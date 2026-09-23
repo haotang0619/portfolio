@@ -21,7 +21,12 @@ export default function Contact() {
       <Box sx={{ maxWidth: '850px', width: '100%' }}>
         <Typography
           id="CONTACT"
-          sx={{ color: 'text.secondary', marginBottom: '32px', width: '100%' }}
+          sx={{
+            color: 'text.secondary',
+            letterSpacing: '2px',
+            marginBottom: '32px',
+            width: '100%',
+          }}
           variant="T14B"
         >
           CONTACT

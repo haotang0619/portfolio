@@ -16,7 +16,12 @@ export default function Work() {
       <Box sx={{ maxWidth: '898px', padding: '0 24px', width: '100%' }}>
         <Typography
           id="WORK"
-          sx={{ color: 'text.secondary', marginBottom: { sm: '32px', xs: '16px' }, width: '100%' }}
+          sx={{
+            color: 'text.secondary',
+            letterSpacing: '2px',
+            marginBottom: { sm: '32px', xs: '16px' },
+            width: '100%',
+          }}
           variant="T14B"
         >
           WORK

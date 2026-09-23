@@ -13,7 +13,7 @@ export default function About() {
       <Box>
         <Typography
           id="ABOUT"
-          sx={{ color: 'text.secondary', marginBottom: '32px' }}
+          sx={{ color: 'text.secondary', letterSpacing: '2px', marginBottom: '32px' }}
           variant="T14B"
         >
           ABOUT ME
