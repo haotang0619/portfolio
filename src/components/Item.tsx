@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 
 export default function Item({
   liItems,
@@ -14,57 +14,45 @@ export default function Item({
   title: string;
 }) {
   return (
-    <Box
-      sx={{
-        borderBottom: '1px solid #FFFFFF14',
-        display: 'flex',
-        flexFlow: 'column',
-        justifyContent: 'center',
-        padding: '24px 24px 32px',
-        position: 'relative',
-        width: '100%',
-      }}
-    >
-      <Grid
-        columnSpacing={4}
-        container
-        rowSpacing={2}
+    <Box sx={{ borderBottom: '1px solid #FFFFFF14', padding: '32px 24px', width: '100%' }}>
+      <Box
         sx={{
-          left: '-32px',
+          columnGap: '32px',
+          display: 'grid',
+          gridTemplateColumns: { md: '200px 1fr', xs: '1fr' },
           margin: 'auto',
           maxWidth: '850px',
-          position: 'relative',
-          width: '100%',
+          rowGap: '8px',
         }}
       >
-        <Grid item md={4} xs={12}>
-          <Typography
-            sx={{ fontSize: { sm: '32px', xs: '24px' }, lineHeight: { sm: '52px', xs: '40px' } }}
-            variant="T32B"
-          >
-            {period}
-          </Typography>
-        </Grid>
+        <Typography sx={{ color: 'text.secondary', lineHeight: '32px' }} variant="T16M">
+          {period}
+        </Typography>
 
-        <Grid item md={8} xs={12}>
-          <Typography
-            sx={{ fontSize: { sm: '32px', xs: '24px' }, lineHeight: { sm: '52px', xs: '40px' } }}
-            variant="T32B"
-          >
-            {title}
-          </Typography>
+        <Box>
+          <Typography variant="T24B">{title}</Typography>
 
-          <Typography sx={{ marginTop: '16px' }} variant="T24M">
+          <Typography sx={{ color: 'primary.main', marginTop: '4px' }} variant="T16B">
             {subtitle}
           </Typography>
 
-          <Box component="ul" sx={{ paddingLeft: '16px' }}>
+          <Box
+            component="ul"
+            sx={{
+              '& a': { color: 'primary.main' },
+              '& b': { color: '#FFFFFF' },
+              '& li + li': { marginTop: '8px' },
+              color: '#FFFFFFB3',
+              margin: '16px 0 0',
+              paddingLeft: '20px',
+            }}
+          >
             {liItems.map((li, idx) => (
               <li key={idx}>{li}</li>
             ))}
           </Box>
-        </Grid>
-      </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 }
