@@ -1,4 +1,4 @@
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 
 import { Box, Grid, Typography } from '@mui/material';
 
@@ -13,14 +13,9 @@ export default function Item({
   subtitle: string;
   title: string;
 }) {
-  const [isHover, setIsHover] = useState(false);
-
   return (
     <Box
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
       sx={{
-        '&:hover': { '& *': { color: '#0D0D0D' }, bgcolor: 'primary.main' },
         borderBottom: '1px solid #FFFFFF14',
         display: 'flex',
         flexFlow: 'column',
@@ -59,22 +54,14 @@ export default function Item({
             {title}
           </Typography>
 
-          <Box sx={{ display: 'flex', flexFlow: isHover ? 'column-reverse' : 'column' }}>
-            <Typography
-              sx={{ marginTop: '16px', visibility: isHover ? 'hidden' : 'visible' }}
-              variant="T24M"
-            >
-              {subtitle}
-            </Typography>
+          <Typography sx={{ marginTop: '16px' }} variant="T24M">
+            {subtitle}
+          </Typography>
 
-            <Box
-              component="ul"
-              sx={{ paddingLeft: '16px', visibility: isHover ? 'visible' : 'hidden' }}
-            >
-              {liItems.map((li, idx) => (
-                <li key={idx}>{li}</li>
-              ))}
-            </Box>
+          <Box component="ul" sx={{ paddingLeft: '16px' }}>
+            {liItems.map((li, idx) => (
+              <li key={idx}>{li}</li>
+            ))}
           </Box>
         </Grid>
       </Grid>
