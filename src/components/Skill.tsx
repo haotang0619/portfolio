@@ -46,11 +46,27 @@ export default function Skill() {
       </Box>
 
       <Box
-        sx={{ display: 'flex', flexFlow: 'column', gap: '24px', maxWidth: '850px', width: '100%' }}
+        sx={{ display: 'flex', flexFlow: 'column', gap: '32px', maxWidth: '850px', width: '100%' }}
       >
         {skillGroups.map(({ label, skills }) => (
-          <Box key={label}>
-            <Typography sx={{ color: 'text.secondary', marginBottom: '12px' }} variant="T14M">
+          <Box
+            key={label}
+            sx={{
+              columnGap: '32px',
+              display: 'grid',
+              gridTemplateColumns: { md: '200px 1fr', xs: '1fr' },
+              rowGap: '12px',
+            }}
+          >
+            <Typography
+              sx={{
+                color: 'primary.main',
+                letterSpacing: '2px',
+                lineHeight: { md: '48px' },
+                textTransform: 'uppercase',
+              }}
+              variant="T14B"
+            >
               {label}
             </Typography>
 
@@ -58,9 +74,9 @@ export default function Skill() {
               {skills.map((skill) => (
                 <Box
                   key={skill}
-                  sx={{ border: '1px solid #FFFFFF14', borderRadius: '40px', padding: '12px 24px' }}
+                  sx={{ border: '1px solid #FFFFFF26', borderRadius: '40px', padding: '12px 24px' }}
                 >
-                  <Typography variant="T16B">{skill}</Typography>
+                  <Typography variant="T16M">{skill}</Typography>
                 </Box>
               ))}
             </Box>
