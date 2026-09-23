@@ -26,64 +26,67 @@ export default function Work() {
       <Item
         liItems={[
           <>
-            Co-founded BeyondBrain and built <b>Lumi</b>, an AI travel planning platform, from
-            scratch as founding full-stack engineer — architecting the platform and AI application
-            flow while integrating hotel inventory across <b>1M+ properties</b> and Google
-            Maps–based POI discovery, helping secure seed funding.
+            Co-founded BeyondBrain and led the development of{' '}
+            <b>Lumi, an AI travel planning platform</b>, transforming{' '}
+            <b>product concepts into production-ready features</b>, scaling to{' '}
+            <b>250K+ daily requests</b>, supporting hotel inventory for <b>1M+ properties</b>, and
+            helping secure <b>seed funding</b>.
           </>,
           <>
-            Architected Lumi&apos;s core planning system, separating a{' '}
-            <b>non-deterministic LLM planning layer</b> from a{' '}
-            <b>deterministic transaction layer</b> that re-validates pricing before booking
-            confirmation, reducing failures caused by free-form LLM outputs through streaming
-            responses and structured outputs.
+            Designed <b>Lumi&apos;s AI planning experience</b> by integrating an{' '}
+            <b>LLM-powered planning engine</b> with <b>deterministic validation workflows</b>,
+            delivering flexible travel recommendations, seamless booking experience, and accurate
+            pricing.
           </>,
           <>
-            Designed and built a normalized relational data model and <b>RBAC</b>-based user
-            management system for{' '}
+            Designed the architecture for{' '}
             <b>
               <a href="https://www.fifthkeys.com/" rel="noopener noreferrer" target="_blank">
                 FifthKeys
               </a>
+              , a hospitality management platform
             </b>
-            , a hospitality management platform — separating availability, reservations, and pricing
-            to ensure transactional consistency and real-time channel synchronization, helping
-            client hotels increase occupancy by <b>20%+</b>.
+            , enabling consistent management of <b>inventory, reservations, and pricing</b> across
+            channels with <b>event-driven architecture</b>, and increasing client hotel occupancy by{' '}
+            <b>20%+</b>.
           </>,
           <>
-            As Interim CTO, coordinated <b>Web, Flutter, and Backend</b> teams, established
-            engineering practices, and hired <b>6 engineers</b>.
+            Grew and mentored a <b>cross-functional engineering team</b>, established engineering
+            practices, and hired <b>6 engineers</b>.
           </>,
         ]}
         period="Feb. 2024 — Jun. 2026"
         subtitle="BeyondBrain"
-        title="Co-Founder & Interim CTO"
+        title="Co-Founder & Full-Stack Engineer"
       />
 
       <Item
         liItems={[
           <>
-            Owned backend architecture, API development, and AI interaction flow for{' '}
-            <b>MixerBox ChatAI</b>&apos;s tool-orchestration system — a production AI infrastructure
-            serving <b>2.4M+ daily requests</b> and <b>9,000 peak RPM</b>, with robust handling for
-            API timeouts, malformed LLM responses, and context failures.
+            Owned the backend architecture and AI interaction workflows for <b>MixerBox ChatAI</b>,
+            improving <b>response reliability</b> and tool orchestration for production AI services
+            handling <b>2.4M+ daily requests</b> and <b>9,000 peak RPM</b>.
           </>,
           <>
-            Engineered concurrency-safe purchasing workflows for <b>MixerBox Pay</b>, a digital
-            commerce platform, using <b>DynamoDB Transactions</b> to prevent race conditions during
-            high-concurrency limited-quantity, fixed-time releases.
+            Built <b>high-concurrency purchasing workflows</b> for <b>MixerBox Pay</b>, a payment
+            and digital commerce platform, ensuring{' '}
+            <b>fair and reliable limited-quantity releases</b> by implementing transactional
+            safeguards that prevented overselling and race conditions during high-demand releases.
           </>,
           <>
-            Built authentication and user-management systems for <b>MixerBox ID</b>, a centralized
-            identity platform with <b>1M+ users</b>.
+            Built authentication and identity management services that power <b>MixerBox ID</b>, a
+            centralized platform with <b>1M+ users</b>, simplifying <b>account management</b> across
+            multiple products.
           </>,
           <>
-            Monitored production systems via <b>AWS CloudWatch</b> and took part in{' '}
-            <b>on-call rotations</b>.
+            Maintained <b>production reliability</b> for large-scale consumer applications by
+            monitoring with AWS CloudWatch, responding to incidents, and providing{' '}
+            <b>on-call support</b>, minimizing <b>service disruptions</b>.
           </>,
           <>
-            Joined as the company&apos;s <b>first full-stack engineer</b> and helped define
-            engineering standards and interview processes as the team scaled.
+            Joined as the company&apos;s <b>first full-stack engineer</b>, helping establish{' '}
+            <b>engineering standards</b>, interview processes, and scalable development practices as
+            the engineering organization grew.
           </>,
         ]}
         period="Jun. 2021 — Feb. 2024"
@@ -94,9 +97,8 @@ export default function Work() {
       <Item
         liItems={[
           <>
-            Built an internal admin console modeled on <b>AWS IAM</b> for access control, developed
-            the company&apos;s website using <b>React.js</b> with a custom backend CMS, and built a
-            social-network side project to explore full-stack patterns.
+            Built internal tooling and customer-facing web applications, including an{' '}
+            <b>IAM-inspired administration platform</b>, a custom CMS, and React applications.
           </>,
         ]}
         period="Jul. 2020 — Feb. 2021"
@@ -107,10 +109,9 @@ export default function Work() {
       <Item
         liItems={[
           <>
-            Developed monitoring dashboards for <b>Taipower</b>&apos;s internal electricity
-            operations team — a small but business-critical system prioritizing reliability and data
-            accuracy — and built <b>Python</b> analysis scripts and <b>SQL</b> schemas for internal
-            reporting.
+            Developed <b>operational dashboards</b> and reporting tools for <b>Taipower&apos;s</b>{' '}
+            internal operations team, improving visibility through <b>reliable data pipelines</b>{' '}
+            and analytics.
           </>,
         ]}
         period="Jul. 2019 — Jun. 2020"
