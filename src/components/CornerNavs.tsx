@@ -1,19 +1,7 @@
-import { useEffect, useState } from 'react';
-
 import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, IconButton, Typography } from '@mui/material';
 import { Moon } from 'iconsax-react';
-
-const navItems = [
-  { label: 'ABOUT' },
-  { label: 'WORK' },
-  { label: 'PROJECTS' },
-  { label: 'SKILLS' },
-  { label: 'EDUCATION' },
-  { label: 'FEATURED' },
-  { label: 'CONTACT' },
-];
 
 const socialItems = [
   { href: 'https://www.facebook.com/haotang0619/', icon: faFacebook },
@@ -22,22 +10,13 @@ const socialItems = [
   { href: 'https://www.linkedin.com/in/haotang0619/', icon: faLinkedin },
 ];
 
-export default function CornerNavs() {
-  const [activeItem, setActiveItem] = useState(null);
-
-  useEffect(() => {
-    const scrollHandler = () => {
-      const scrollY = window.scrollY;
-      const activeItem = navItems.findLast(
-        (item) => scrollY >= document.getElementById(item.label).offsetTop - 48,
-      );
-      setActiveItem(activeItem?.label);
-    };
-
-    window.addEventListener('scroll', scrollHandler);
-    return () => window.removeEventListener('scroll', scrollHandler);
-  }, []);
-
+export default function CornerNavs({
+  activeLabel,
+  labels,
+}: {
+  activeLabel?: string;
+  labels: string[];
+}) {
   return (
     <>
       <Typography
@@ -63,7 +42,7 @@ export default function CornerNavs() {
           zIndex: 1000,
         }}
       >
-        {navItems.map(({ label }) => (
+        {labels.map((label) => (
           <Typography
             key={label}
             onClick={() => {
@@ -72,7 +51,7 @@ export default function CornerNavs() {
                 top: document.getElementById(label).offsetTop - 48,
               });
             }}
-            sx={{ color: activeItem === label ? '#FFFFFF' : 'text.secondary', cursor: 'pointer' }}
+            sx={{ color: activeLabel === label ? '#FFFFFF' : 'text.secondary', cursor: 'pointer' }}
             variant="T14M"
           >
             {label}

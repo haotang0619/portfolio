@@ -12,13 +12,25 @@ import Projects from '@/components/Projects';
 import Skill from '@/components/Skill';
 import Work from '@/components/Work';
 
-const sections = [Banner, About, Work, Projects, Skill, Education, Blog, Contact];
+// `label` must match the section heading id; it is also shown in the corner navigation.
+const sections: { Component: () => JSX.Element; label?: string }[] = [
+  { Component: Banner },
+  { Component: About, label: 'ABOUT' },
+  { Component: Work, label: 'WORK' },
+  { Component: Projects, label: 'PROJECTS' },
+  { Component: Skill, label: 'SKILLS' },
+  { Component: Education, label: 'EDUCATION' },
+  { Component: Blog, label: 'FEATURED' },
+  { Component: Contact, label: 'CONTACT' },
+];
+const navLabels = sections.map(({ label }) => label).filter(Boolean);
 
 export default function Home() {
   const sectionRefs = useRef<HTMLDivElement[]>([]);
   const [activeIdx, setActiveIdx] = useState(0);
 
-  // Focus the section crossing the viewport's vertical center; the last one once scrolled to the bottom.
+  // Focus the section crossing a line near the top third of the viewport (capped so short sections
+  // reached via the corner navigation stay focused on tall screens); the last one at the bottom.
   useEffect(() => {
     const updateActive = () => {
       const { innerHeight, scrollY } = window;
@@ -26,8 +38,9 @@ export default function Home() {
         setActiveIdx(sections.length - 1);
         return;
       }
+      const focusLine = Math.min(innerHeight / 3, 300);
       const idx = sectionRefs.current.findLastIndex(
-        (el) => el.getBoundingClientRect().top <= innerHeight / 2,
+        (el) => el.getBoundingClientRect().top <= focusLine,
       );
       setActiveIdx(Math.max(idx, 0));
     };
@@ -43,7 +56,7 @@ export default function Home() {
 
   return (
     <>
-      <CornerNavs />
+      <CornerNavs activeLabel={sections[activeIdx].label} labels={navLabels} />
       <Box
         sx={{
           '& > div > div': {
@@ -52,7 +65,7 @@ export default function Home() {
           },
         }}
       >
-        {sections.map((Section, idx) => (
+        {sections.map(({ Component }, idx) => (
           <Box
             key={idx}
             ref={(el: HTMLDivElement) => (sectionRefs.current[idx] = el)}
@@ -62,7 +75,7 @@ export default function Home() {
               transition: 'opacity 0.6s ease',
             }}
           >
-            <Section />
+            <Component />
           </Box>
         ))}
       </Box>
