@@ -25,7 +25,7 @@ export default function Item({
           rowGap: '8px',
         }}
       >
-        <Typography sx={{ color: 'text.secondary', lineHeight: '32px' }} variant="T16M">
+        <Typography sx={{ color: '#FFFFFFCC', lineHeight: '32px' }} variant="T16M">
           {period}
         </Typography>
 
@@ -42,7 +42,7 @@ export default function Item({
               '& a': { color: 'primary.main' },
               '& b': { color: '#FFFFFF' },
               '& li + li': { marginTop: '8px' },
-              color: '#FFFFFFCC',
+              color: '#FFFFFFD9',
               margin: '16px 0 0',
               paddingLeft: '20px',
             }}

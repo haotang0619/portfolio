@@ -148,7 +148,7 @@ export default function Projects() {
                 {company}
               </Typography>
               <Typography variant="T24B">{name}</Typography>
-              <Typography sx={{ color: 'text.secondary', marginBottom: '16px' }} variant="T14M">
+              <Typography sx={{ color: '#FFFFFFCC', marginBottom: '16px' }} variant="T14M">
                 {tagline}
               </Typography>
 
@@ -156,7 +156,7 @@ export default function Projects() {
                 {goal}
               </Typography>
               <Typography
-                sx={{ '& b': { color: 'text.primary' }, color: 'text.secondary' }}
+                sx={{ '& b': { color: 'text.primary' }, color: '#FFFFFFD9' }}
                 variant="T16R"
               >
                 {challenge}
