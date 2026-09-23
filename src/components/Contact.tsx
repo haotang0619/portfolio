@@ -7,8 +7,9 @@ import { useLocale } from '@/utils/i18n';
 const contactItems = [
   { href: 'https://www.facebook.com/haotang0619/', text: 'Facebook' },
   { href: 'https://www.instagram.com/hao_tang_0619/', text: 'Instagram' },
-  { href: 'https://github.com/haotang0619/', text: 'Github' },
-  { href: 'https://www.linkedin.com/in/haotang0619/', text: 'Linkedin' },
+  { href: 'https://github.com/haotang0619/', text: 'GitHub' },
+  { href: 'https://leetcode.com/u/ht619/', text: 'LeetCode' },
+  { href: 'https://www.linkedin.com/in/haotang0619/', text: 'LinkedIn' },
 ];
 
 export default function Contact() {
