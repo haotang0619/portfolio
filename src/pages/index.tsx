@@ -6,6 +6,7 @@ import Blog from '@/components/Blog';
 import Contact from '@/components/Contact';
 import CornerNavs from '@/components/CornerNavs';
 import Education from '@/components/Education';
+import Projects from '@/components/Projects';
 import Skill from '@/components/Skill';
 import Work from '@/components/Work';
 
@@ -25,6 +26,7 @@ export default function Home() {
         <About />
         <Education />
         <Work />
+        <Projects />
         <Skill />
         <Blog />
         <Contact />

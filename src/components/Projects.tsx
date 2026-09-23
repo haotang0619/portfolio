@@ -1,0 +1,195 @@
+import { ReactNode } from 'react';
+
+import { Box, Typography } from '@mui/material';
+
+const projects: {
+  challenge: ReactNode;
+  company: string;
+  goal: string;
+  metrics: { label: string; value: string }[];
+  name: string;
+  src: string;
+  tagline: string;
+}[] = [
+  {
+    challenge: (
+      <>
+        Isolating <b>non-deterministic AI generation</b> from <b>deterministic booking execution</b>{' '}
+        to ensure transaction reliability.
+      </>
+    ),
+    company: 'BeyondBrain',
+    goal: 'Architect an AI travel platform integrating LLMs with live OTA inventory and POI discovery.',
+    metrics: [{ label: 'Requests / Day', value: '250K+' }],
+    name: 'Lumi',
+    src: '/imgs/projects/lumi.png',
+    tagline: 'AI Travel Booking & Discovery Platform',
+  },
+  {
+    challenge: (
+      <>
+        Guaranteeing <b>strict transactional consistency</b> across inventory availability,
+        reservations, and dynamic pricing.
+      </>
+    ),
+    company: 'BeyondBrain',
+    goal: 'Design the relational data model and RBAC backend for a real-time hospitality management platform.',
+    metrics: [{ label: 'Occupancy Rate', value: '+20%' }],
+    name: 'FifthKeys',
+    src: '/imgs/projects/fifthkeys.png',
+    tagline: 'AI-Powered Hotel Property Management System',
+  },
+  {
+    challenge: (
+      <>
+        Engineering robust fallbacks for{' '}
+        <b>LLM hallucinations, API timeouts, and context failures</b> at massive scale.
+      </>
+    ),
+    company: 'MixerBox',
+    goal: 'Build the backend workflow orchestration and APIs for a production-grade AI assistant.',
+    metrics: [
+      { label: 'Requests / Day', value: '2.4M+' },
+      { label: 'Peak RPM', value: '9,000' },
+    ],
+    name: 'MixerBox ChatAI',
+    src: '/imgs/projects/mixerbox-chatai.png',
+    tagline: 'Multi-Modal AI Assistant Platform',
+  },
+  {
+    challenge: (
+      <>
+        Using <b>DynamoDB Transactions</b> to maintain strict inventory consistency and prevent
+        overselling during massive traffic spikes.
+      </>
+    ),
+    company: 'MixerBox',
+    goal: 'Engineer a digital commerce checkout workflow capable of handling sudden flash sales.',
+    metrics: [{ label: 'Transaction Safety', value: '100%' }],
+    name: 'MixerBox Pay',
+    src: '/imgs/projects/mixerbox-pay.png',
+    tagline: 'Instant Checkout & Payment-Link Platform',
+  },
+  {
+    challenge: (
+      <>
+        Designing scalable, secure, and universally applicable <b>identity infrastructure</b> across
+        a diverse product ecosystem.
+      </>
+    ),
+    company: 'MixerBox',
+    goal: 'Build a centralized authentication, identity, and user-management service.',
+    metrics: [{ label: 'Active Users', value: '1M+' }],
+    name: 'MixerBox ID',
+    src: '/imgs/projects/mixerbox-id.png',
+    tagline: 'Centralized Authentication & Identity Service',
+  },
+];
+
+export default function Projects() {
+  return (
+    <Box
+      sx={{
+        alignItems: 'center',
+        display: 'flex',
+        flexFlow: 'column',
+        padding: '72px 24px',
+      }}
+    >
+      <Box sx={{ maxWidth: '850px', width: '100%' }}>
+        <Typography
+          id="PROJECTS"
+          sx={{ color: 'text.secondary', marginBottom: '32px', width: '100%' }}
+          variant="T14B"
+        >
+          PROJECTS
+        </Typography>
+      </Box>
+
+      <Box
+        sx={{ display: 'flex', flexFlow: 'column', gap: '24px', maxWidth: '850px', width: '100%' }}
+      >
+        {projects.map(({ challenge, company, goal, metrics, name, src, tagline }) => (
+          <Box
+            key={name}
+            sx={{
+              bgcolor: '#FFFFFF0A',
+              borderRadius: '8px',
+              display: 'flex',
+              flexDirection: { md: 'row', xs: 'column' },
+              gap: { md: '32px', xs: '24px' },
+              padding: { sm: '32px', xs: '24px' },
+            }}
+          >
+            <Box sx={{ flex: { md: '0 0 40%' } }}>
+              <Box
+                sx={{
+                  aspectRatio: '16 / 10',
+                  bgcolor: '#FFFFFF',
+                  borderRadius: '8px',
+                  overflow: 'hidden',
+                }}
+              >
+                <img
+                  alt={`${name} screenshot`}
+                  loading="lazy"
+                  src={src}
+                  style={{ height: '100%', objectFit: 'contain', width: '100%' }}
+                />
+              </Box>
+            </Box>
+
+            <Box sx={{ flex: 1 }}>
+              <Typography
+                sx={{ color: 'primary.main', letterSpacing: '2px', textTransform: 'uppercase' }}
+                variant="T14B"
+              >
+                {company}
+              </Typography>
+              <Typography variant="T24B">{name}</Typography>
+              <Typography sx={{ color: 'text.secondary', marginBottom: '16px' }} variant="T14M">
+                {tagline}
+              </Typography>
+
+              <Typography sx={{ marginBottom: '12px' }} variant="T16R">
+                {goal}
+              </Typography>
+              <Typography
+                sx={{ '& b': { color: 'text.primary' }, color: 'text.secondary' }}
+                variant="T16R"
+              >
+                {challenge}
+              </Typography>
+
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '20px' }}>
+                {metrics.map(({ label, value }) => (
+                  <Box
+                    key={label}
+                    sx={{
+                      alignItems: 'baseline',
+                      bgcolor: '#EB59391F',
+                      borderRadius: '8px',
+                      display: 'flex',
+                      gap: '8px',
+                      padding: '8px 16px',
+                    }}
+                  >
+                    <Typography sx={{ color: 'primary.main' }} variant="T24B">
+                      {value}
+                    </Typography>
+                    <Typography
+                      sx={{ color: 'primary.main', textTransform: 'uppercase' }}
+                      variant="T14B"
+                    >
+                      {label}
+                    </Typography>
+                  </Box>
+                ))}
+              </Box>
+            </Box>
+          </Box>
+        ))}
+      </Box>
+    </Box>
+  );
+}

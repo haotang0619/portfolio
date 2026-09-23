@@ -9,6 +9,7 @@ const navItems = [
   { label: 'ABOUT' },
   { label: 'EDUCATION' },
   { label: 'WORK' },
+  { label: 'PROJECTS' },
   { label: 'SKILLS' },
   { label: 'FEATURED' },
   { label: 'CONTACT' },
