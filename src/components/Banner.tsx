@@ -20,6 +20,8 @@ export default function Banner() {
         display: 'flex',
         flexFlow: 'column',
         gap: { sm: '32px', xs: '24px' },
+        // Extra room on top of the page-level section padding set in pages/index.tsx.
+        marginTop: { sm: '24px', xs: '32px' },
         padding: '72px 24px',
       }}
     >
