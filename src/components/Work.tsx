@@ -108,7 +108,7 @@ export default function Work() {
             display: 'flex',
             gap: '8px',
             letterSpacing: '2px',
-            width: '100%',
+            width: 'fit-content',
           }}
           variant="T14B"
         >
