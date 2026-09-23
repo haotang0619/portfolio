@@ -2,6 +2,8 @@ import { ReactNode } from 'react';
 
 import { Box, Typography } from '@mui/material';
 
+import { colors } from '@/theme/colorVariables';
+
 export default function Item({
   liItems,
   period,
@@ -14,7 +16,7 @@ export default function Item({
   title: string;
 }) {
   return (
-    <Box sx={{ borderBottom: '1px solid #FFFFFF14', padding: '32px 24px', width: '100%' }}>
+    <Box sx={{ borderBottom: `1px solid ${colors.border}`, padding: '32px 24px', width: '100%' }}>
       <Box
         sx={{
           columnGap: '32px',
@@ -25,7 +27,7 @@ export default function Item({
           rowGap: '8px',
         }}
       >
-        <Typography sx={{ color: '#FFFFFFCC', lineHeight: '32px' }} variant="T16M">
+        <Typography sx={{ color: colors.textMuted, lineHeight: '32px' }} variant="T16M">
           {period}
         </Typography>
 
@@ -40,9 +42,9 @@ export default function Item({
             component="ul"
             sx={{
               '& a': { color: 'primary.main' },
-              '& b': { color: '#FFFFFF' },
+              '& b': { color: colors.text },
               '& li + li': { marginTop: '8px' },
-              color: '#FFFFFFD9',
+              color: colors.textBody,
               margin: '16px 0 0',
               paddingLeft: '20px',
             }}

@@ -1,5 +1,7 @@
 import { Box, Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 
+import { colors } from '@/theme/colorVariables';
+
 const blogs = [
   {
     date: 'Oct 6, 2022',
@@ -53,7 +55,7 @@ export default function Blog() {
               onClick={() => window.open(url, '_blank', 'noopener')}
               sx={{
                 '&:hover': { '& img': { transform: 'scale(1.2)', transition: 'transform 0.5s' } },
-                bgcolor: '#FFFFFF14',
+                bgcolor: colors.surfaceRaised,
                 borderRadius: '8px',
                 cursor: 'pointer',
                 width: '100%',

@@ -1,7 +1,11 @@
+import { useEffect, useState } from 'react';
+
 import { faFacebook, faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Box, IconButton, Typography } from '@mui/material';
-import { Moon } from 'iconsax-react';
+import { Moon, Sun1 } from 'iconsax-react';
+
+import { COLOR_SCHEME_STORAGE_KEY, colors } from '@/theme/colorVariables';
 
 const socialItems = [
   { href: 'https://www.facebook.com/haotang0619/', icon: faFacebook },
@@ -17,6 +21,19 @@ export default function CornerNavs({
   activeLabel?: string;
   labels: string[];
 }) {
+  const [isLight, setIsLight] = useState(false);
+
+  // The initial scheme is applied to <html> before paint by the script in `_document.tsx`.
+  useEffect(() => setIsLight(document.documentElement.dataset.theme === 'light'), []);
+
+  const toggleColorScheme = () => {
+    const nextIsLight = !isLight;
+    if (nextIsLight) document.documentElement.dataset.theme = 'light';
+    else delete document.documentElement.dataset.theme;
+    setIsLight(nextIsLight);
+    localStorage.setItem(COLOR_SCHEME_STORAGE_KEY, nextIsLight ? 'light' : 'dark');
+  };
+
   return (
     <>
       <Typography
@@ -52,8 +69,8 @@ export default function CornerNavs({
               });
             }}
             sx={{
-              '&:hover': { color: '#FFFFFF' },
-              color: activeLabel === label ? '#FFFFFF' : '#FFFFFF66',
+              '&:hover': { color: colors.text },
+              color: activeLabel === label ? colors.text : colors.textFaint,
               cursor: 'pointer',
               transition: 'color 0.2s',
             }}
@@ -93,9 +110,16 @@ export default function CornerNavs({
       <Box
         sx={{ bottom: '24px', position: 'fixed', right: { sm: '36px', xs: '24px' }, zIndex: 1000 }}
       >
-        {/* FIXME: Dark mode toggle (not yet implemented) */}
-        <IconButton sx={{ color: '#FFFFFF', display: 'none' }}>
-          <Moon variant="Bold" />
+        <IconButton
+          aria-label={isLight ? 'Switch to dark mode' : 'Switch to light mode'}
+          onClick={toggleColorScheme}
+          sx={{
+            '&:hover': { bgcolor: 'transparent', color: 'primary.main' },
+            color: 'text.secondary',
+            transition: 'color 0.2s',
+          }}
+        >
+          {isLight ? <Moon size={24} variant="Bold" /> : <Sun1 size={24} variant="Bold" />}
         </IconButton>
       </Box>
     </>

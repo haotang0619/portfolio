@@ -1,5 +1,7 @@
 import { Box, Typography } from '@mui/material';
 
+import { colors } from '@/theme/colorVariables';
+
 const skillGroups = [
   { label: 'Programming', skills: ['TypeScript', 'JavaScript', 'Python', 'SQL', 'C++'] },
   { label: 'Frontend & Backend', skills: ['React.js', 'Next.js', 'Node.js', 'NestJS', 'FastAPI'] },
@@ -79,7 +81,11 @@ export default function Skill() {
               {skills.map((skill) => (
                 <Box
                   key={skill}
-                  sx={{ border: '1px solid #FFFFFF26', borderRadius: '40px', padding: '12px 24px' }}
+                  sx={{
+                    border: `1px solid ${colors.borderStrong}`,
+                    borderRadius: '40px',
+                    padding: '12px 24px',
+                  }}
                 >
                   <Typography variant="T16M">{skill}</Typography>
                 </Box>

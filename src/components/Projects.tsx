@@ -3,6 +3,8 @@ import { ReactNode, useState } from 'react';
 import { Box, Dialog, Typography } from '@mui/material';
 import { ExportSquare } from 'iconsax-react';
 
+import { colors } from '@/theme/colorVariables';
+
 const projects: {
   challenge: ReactNode;
   company: string;
@@ -123,7 +125,7 @@ export default function Projects() {
           <Box
             key={name}
             sx={{
-              bgcolor: '#FFFFFF0A',
+              bgcolor: colors.surface,
               borderRadius: '8px',
               display: 'flex',
               flexDirection: { md: 'row', xs: 'column' },
@@ -180,7 +182,7 @@ export default function Projects() {
               <Typography sx={{ marginBottom: '6px' }} variant="T24B">
                 {name}
               </Typography>
-              <Typography sx={{ color: '#FFFFFFCC', marginBottom: '16px' }} variant="T14M">
+              <Typography sx={{ color: colors.textMuted, marginBottom: '16px' }} variant="T14M">
                 {tagline}
               </Typography>
 
@@ -188,7 +190,7 @@ export default function Projects() {
                 {goal}
               </Typography>
               <Typography
-                sx={{ '& b': { color: 'text.primary' }, color: '#FFFFFFD9' }}
+                sx={{ '& b': { color: 'text.primary' }, color: colors.textBody }}
                 variant="T16R"
               >
                 {challenge}

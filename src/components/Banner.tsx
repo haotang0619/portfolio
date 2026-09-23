@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import { ArrowDown } from 'iconsax-react';
 
+import { colors } from '@/theme/colorVariables';
 import { textStyle } from '@/theme/util';
 
 const buttonSx = {
@@ -80,7 +81,7 @@ export default function Banner() {
               top: document.getElementById('CONTACT').offsetTop - 48,
             });
           }}
-          sx={{ ...buttonSx, border: '1px solid #FFFFFF', color: '#FFFFFF' }}
+          sx={{ ...buttonSx, border: `1px solid ${colors.text}`, color: colors.text }}
         >
           CONTACT
         </Box>
@@ -96,7 +97,7 @@ export default function Banner() {
         sx={{
           '& > svg': { transform: 'scaleY(0.8)' },
           '&:hover': { opacity: 0.75 },
-          border: '1px solid #FFFFFF',
+          border: `1px solid ${colors.text}`,
           borderRadius: '50%',
           cursor: 'pointer',
           display: 'flex',

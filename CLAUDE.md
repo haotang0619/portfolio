@@ -37,7 +37,8 @@ Husky runs on commit:
 - Custom MUI Typography variants named `T{size}{weight}`, e.g. `T32B`, `T14R`. Sizes: 88, 64, 32, 24, 16, 14. Weights: `B`=700, `S`=600, `M`=500, `R`=400.
 - `util.ts` defines the variant list (`textHierarchy`) and size → font-size/line-height mapping; `theme/index.tsx` generates the style overrides from it; `type.ts` augments MUI's TypeScript types so the variants type-check. Adding a new size/weight requires updating all three.
 - Font weights resolve through CSS variables (`--weight-B` etc.) injected globally from `fontVariables.tsx` via `GlobalCSS.tsx`.
-- Palette: primary `#EB5939`, text white / `#FFFFFFA6` (secondary). Background `#0D0D0D` (`globals.css`). Font family is Poppins.
+- Light/dark mode: all neutral colors are CSS variables defined per scheme in `colorVariables.ts` (dark on `:root`, light on `:root[data-theme="light"]`, emitted by `GlobalCSS.tsx`). Use the exported `colors.*` (`var(--color-*)`) in `sx` instead of hard-coded hex values; the MUI palette's `text` and `background` point at the same variables. Dark is the default; the toggle in `CornerNavs` sets `data-theme` and stores the choice in `localStorage`, and an inline script in `_document.tsx` re-applies it before first paint.
+- Primary `#EB5939` is shared by both schemes (MUI can't derive palette shades from a CSS variable). Font family is Poppins.
 
 ## Code style
 

@@ -1,6 +1,8 @@
 import { Box, Grid, Typography } from '@mui/material';
 import { ArrowRight2 } from 'iconsax-react';
 
+import { colors } from '@/theme/colorVariables';
+
 const contactItems = [
   { href: 'https://www.facebook.com/haotang0619/', text: 'Facebook' },
   { href: 'https://www.instagram.com/hao_tang_0619/', text: 'Instagram' },
@@ -79,7 +81,7 @@ export default function Contact() {
             <Typography sx={{ color: 'text.secondary', marginBottom: '4px' }} variant="T16M">
               Email
             </Typography>
-            <Typography sx={{ '& > a': { color: '#FFFFFF' } }} variant="T14M">
+            <Typography sx={{ '& > a': { color: colors.text } }} variant="T14M">
               <a href="mailto:haotang.tw@gmail.com">haotang.tw@gmail.com</a>
             </Typography>
           </Box>
@@ -88,7 +90,7 @@ export default function Contact() {
             <Typography sx={{ color: 'text.secondary', marginBottom: '4px' }} variant="T16M">
               Phone
             </Typography>
-            <Typography sx={{ '& > a': { color: '#FFFFFF' } }} variant="T14M">
+            <Typography sx={{ '& > a': { color: colors.text } }} variant="T14M">
               <a href="tel:+886953573473">+886 953-573-473</a>
             </Typography>
           </Box>
