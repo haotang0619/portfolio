@@ -74,7 +74,7 @@ export default function Contact() {
             <Typography sx={{ color: 'text.secondary', marginBottom: '4px' }} variant="T16M">
               Email
             </Typography>
-            <Typography sx={{ '& > a': { color: '#FFFFFF40' } }} variant="T14M">
+            <Typography sx={{ '& > a': { color: '#FFFFFF' } }} variant="T14M">
               <a href="mailto:haotang.tw@gmail.com">haotang.tw@gmail.com</a>
             </Typography>
           </Box>
@@ -83,7 +83,7 @@ export default function Contact() {
             <Typography sx={{ color: 'text.secondary', marginBottom: '4px' }} variant="T16M">
               Phone
             </Typography>
-            <Typography sx={{ '& > a': { color: '#FFFFFF40' } }} variant="T14M">
+            <Typography sx={{ '& > a': { color: '#FFFFFF' } }} variant="T14M">
               <a href="tel:+886953573473">+886 953-573-473</a>
             </Typography>
           </Box>

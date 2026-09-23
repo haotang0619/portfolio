@@ -22,7 +22,7 @@ export const theme = createTheme({
   },
   palette: {
     primary: { main: '#EB5939' },
-    text: { primary: '#FFFFFF', secondary: '#FFFFFF73' },
+    text: { primary: '#FFFFFF', secondary: '#FFFFFFA6' },
   },
   typography: { fontFamily: 'Poppins' }, // This changes all MUI components
 });

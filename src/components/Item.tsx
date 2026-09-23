@@ -42,7 +42,7 @@ export default function Item({
               '& a': { color: 'primary.main' },
               '& b': { color: '#FFFFFF' },
               '& li + li': { marginTop: '8px' },
-              color: '#FFFFFFB3',
+              color: '#FFFFFFCC',
               margin: '16px 0 0',
               paddingLeft: '20px',
             }}
