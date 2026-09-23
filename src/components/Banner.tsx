@@ -1,6 +1,17 @@
 import { Box, Typography } from '@mui/material';
 import { ArrowDown } from 'iconsax-react';
 
+import { textStyle } from '@/theme/util';
+
+const buttonSx = {
+  ...textStyle(14, 'B'),
+  '&:hover': { opacity: 0.75 },
+  borderRadius: '40px',
+  letterSpacing: '2px',
+  padding: '12px 32px',
+  textDecoration: 'none',
+};
+
 export default function Banner() {
   return (
     <Box
@@ -8,30 +19,70 @@ export default function Banner() {
         alignItems: 'center',
         display: 'flex',
         flexFlow: 'column',
-        gap: '40px',
+        gap: { sm: '32px', xs: '24px' },
         padding: '72px 24px',
       }}
     >
-      <img alt="Howard" src="/imgs/howard.png" width="280px" />
-      <Typography
-        sx={{
-          fontSize: { sm: '64px', xs: '48px' },
-          textAlign: 'center',
-          textTransform: 'uppercase',
-        }}
-        variant="T64B"
-      >{`Hi, I’m Howard`}</Typography>
-      <Typography
-        sx={{
-          color: 'text.secondary',
-          fontSize: { sm: '32px', xs: '24px' },
-          textAlign: 'center',
-          textTransform: 'uppercase',
-        }}
-        variant="T32B"
-      >
-        Full-Stack Engineer
-      </Typography>
+      <Box
+        alt="Howard"
+        component="img"
+        src="/imgs/howard.png"
+        sx={{ width: { sm: '200px', xs: '160px' } }}
+      />
+
+      <Box sx={{ textAlign: 'center' }}>
+        <Typography
+          sx={{
+            fontSize: { sm: '64px', xs: '40px' },
+            lineHeight: { sm: '82px', xs: '52px' },
+            marginBottom: '16px',
+            textTransform: 'uppercase',
+          }}
+          variant="T64B"
+        >{`Hi, I’m Howard`}</Typography>
+        <Typography
+          sx={{
+            color: 'text.secondary',
+            fontSize: { sm: '32px', xs: '24px' },
+            textTransform: 'uppercase',
+          }}
+          variant="T32B"
+        >
+          Full-Stack Engineer
+        </Typography>
+        <Typography
+          sx={{ color: 'primary.main', letterSpacing: '2px', marginTop: '8px' }}
+          variant="T14B"
+        >
+          AI SYSTEMS • DISTRIBUTED BACKEND • PRODUCT ARCHITECTURE
+        </Typography>
+      </Box>
+
+      <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: '16px', justifyContent: 'center' }}>
+        <Box
+          component="a"
+          href="/assets/docs/resume.pdf"
+          rel="noopener noreferrer"
+          sx={{ ...buttonSx, bgcolor: 'primary.main', color: '#0D0D0D' }}
+          target="_blank"
+        >
+          RESUME
+        </Box>
+        <Box
+          component="a"
+          href="#CONTACT"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({
+              behavior: 'smooth',
+              top: document.getElementById('CONTACT').offsetTop - 48,
+            });
+          }}
+          sx={{ ...buttonSx, border: '1px solid #FFFFFF', color: '#FFFFFF' }}
+        >
+          CONTACT
+        </Box>
+      </Box>
 
       <Box
         onClick={() =>
@@ -47,11 +98,10 @@ export default function Banner() {
           borderRadius: '50%',
           cursor: 'pointer',
           display: 'flex',
-          padding: '20px',
-          transform: { sm: 'scale(1)', xs: 'scale(0.7)' },
+          padding: '12px',
         }}
       >
-        <ArrowDown size={78} />
+        <ArrowDown size={32} />
       </Box>
     </Box>
   );
