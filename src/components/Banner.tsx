@@ -3,6 +3,7 @@ import { ArrowDown } from 'iconsax-react';
 
 import { colors } from '@/theme/colorVariables';
 import { textStyle } from '@/theme/util';
+import { scrollToSection } from '@/utils/scrollToSection';
 
 const buttonSx = {
   ...textStyle(14, 'B'),
@@ -76,10 +77,7 @@ export default function Banner() {
           href="#CONTACT"
           onClick={(e) => {
             e.preventDefault();
-            window.scrollTo({
-              behavior: 'smooth',
-              top: document.getElementById('CONTACT').offsetTop - 48,
-            });
+            scrollToSection('CONTACT');
           }}
           sx={{ ...buttonSx, border: `1px solid ${colors.text}`, color: colors.text }}
         >
@@ -88,12 +86,7 @@ export default function Banner() {
       </Box>
 
       <Box
-        onClick={() =>
-          window.scrollTo({
-            behavior: 'smooth',
-            top: document.getElementById('ABOUT').offsetTop - 48,
-          })
-        }
+        onClick={() => scrollToSection('ABOUT')}
         sx={{
           '& > svg': { transform: 'scaleY(0.8)' },
           '&:hover': { opacity: 0.75 },

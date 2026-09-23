@@ -4,6 +4,7 @@ export const COLOR_SCHEME_STORAGE_KEY = 'color-scheme';
 // `<html data-theme="light">` is set (see `_document.tsx` and the toggle in `CornerNavs`).
 const colorTokens = {
   bg: { dark: '#0D0D0D', light: '#F7F5F2' },
+  bgTranslucent: { dark: '#0D0D0DCC', light: '#F7F5F2CC' },
   border: { dark: '#FFFFFF14', light: '#0D0D0D14' },
   borderStrong: { dark: '#FFFFFF26', light: '#0D0D0D26' },
   surface: { dark: '#FFFFFF0A', light: '#FFFFFF' },
