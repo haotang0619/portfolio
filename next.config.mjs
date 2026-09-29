@@ -5,8 +5,9 @@ const withBundleAnalyzer = process.env.ANALYZE === 'true' ? NextBundleAnalyzer()
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // English stays at `/` regardless of the browser language; Traditional Chinese lives at `/zh-TW`.
-  i18n: { defaultLocale: 'en', localeDetection: false, locales: ['en', 'zh-TW'] },
+  // Visiting `/` redirects by Accept-Language (falling back to English) unless the NEXT_LOCALE
+  // cookie, set by the language toggle, records an explicit choice. Traditional Chinese lives at `/zh-TW`.
+  i18n: { defaultLocale: 'en', localeDetection: true, locales: ['en', 'zh-TW'] },
   reactStrictMode: true,
   swcMinify: true,
 };

@@ -84,12 +84,17 @@ export default function CornerNavs({
   );
 
   // Page content differs per locale, so keep the current scroll position rather than jumping to top.
+  // NEXT_LOCALE overrides Accept-Language detection so the choice sticks on later visits to `/`.
+  const nextLocale = locale === 'en' ? 'zh-TW' : 'en';
   const localeToggle = (
     <IconButton
       aria-label={t({ en: '切換至繁體中文', 'zh-TW': 'Switch to English' })}
       component={Link}
       href="/"
-      locale={locale === 'en' ? 'zh-TW' : 'en'}
+      locale={nextLocale}
+      onClick={() => {
+        document.cookie = `NEXT_LOCALE=${nextLocale}; path=/; max-age=31536000; samesite=lax`;
+      }}
       scroll={false}
       sx={squareButtonSx}
     >
