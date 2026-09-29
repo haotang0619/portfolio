@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { useLocale } from '@/utils/i18n';
 
 export default function About() {
-  const { t } = useLocale();
+  const { locale, t } = useLocale();
 
   return (
     <Box
@@ -27,6 +27,7 @@ export default function About() {
           sx={{
             '& > span': { color: 'primary.main' },
             fontSize: { sm: '32px', xs: '20px' },
+            letterSpacing: locale === 'zh-TW' ? '2px' : undefined,
             lineHeight: { sm: '52px', xs: '34px' },
             maxWidth: '850px',
           }}
@@ -35,19 +36,20 @@ export default function About() {
           {t({
             en: (
               <>
-                Hi! My name is Howard Tang or Hao Tang. I am a <span>Full-stack Engineer</span> with
-                startup founding experience, hands-on across <span>architecture</span>, frontend and
-                backend development, and <span>AI system design</span>. Experienced with{' '}
-                <span>TypeScript</span>-based web development, primarily <span>NestJS</span> on the
-                backend and <span>Next.js</span> on the frontend, with additional experience in{' '}
-                <span>Python FastAPI</span>. Familiar with <span>AWS</span> cloud services and
-                building LLM-powered applications from planning layer to production infrastructure.
+                Hi! My name is Howard Tang or Hao Tang. I am a{' '}
+                <span>Senior Full-stack Engineer</span> with startup founding experience, hands-on
+                across <span>architecture</span>, frontend and backend development, and{' '}
+                <span>AI system design</span>. Experienced with <span>TypeScript</span>-based web
+                development, primarily <span>NestJS</span> on the backend and <span>Next.js</span>{' '}
+                on the frontend, with additional experience in <span>Python FastAPI</span>. Familiar
+                with <span>AWS</span> cloud services and building LLM-powered applications from
+                planning layer to production infrastructure.
               </>
             ),
             'zh-TW': (
               <>
                 嗨！我是唐浩（Howard Tang），一名具新創共同創辦經驗的
-                <span>全端工程師</span>，實際參與<span>系統架構</span>、前後端開發與{' '}
+                <span>資深全端工程師</span>，實際參與<span>系統架構</span>、前後端開發與{' '}
                 <span>AI 系統設計</span>。熟悉以 <span>TypeScript</span> 為核心的 Web
                 開發，後端最熟悉 <span>NestJS</span>，前端使用 <span>Next.js</span>，也具備{' '}
                 <span>Python FastAPI</span> 的開發經驗。熟悉 <span>AWS</span>{' '}
