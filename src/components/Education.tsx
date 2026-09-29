@@ -60,6 +60,75 @@ export default function Education() {
           'zh-TW': '資訊工程學系 學士',
         })}
       />
+
+      <Item
+        liItems={t({
+          en: [
+            <>
+              Elected <b>Class Outstanding Student</b> in 11th grade (
+              <a
+                href="/imgs/education/class_outstanding_student.png"
+                rel="noreferrer"
+                target="_blank"
+              >
+                certificate
+              </a>
+              ).
+            </>,
+            <>
+              Won the national <b>Team Gold Medal</b> at the 18th TRML National High School
+              Mathematics Competition in 12th grade (
+              <a href="/imgs/education/trml_team_gold_medal.png" rel="noreferrer" target="_blank">
+                certificate
+              </a>
+              ,{' '}
+              <a
+                href="https://news.ltn.com.tw/news/life/breakingnews/1801983"
+                rel="noreferrer"
+                target="_blank"
+              >
+                news
+              </a>
+              ).
+            </>,
+          ],
+          'zh-TW': [
+            <>
+              高二當選<b>班級優良學生</b>（
+              <a
+                href="/imgs/education/class_outstanding_student.png"
+                rel="noreferrer"
+                target="_blank"
+              >
+                獎狀
+              </a>
+              ）。
+            </>,
+            <>
+              高三榮獲 TRML <b>全國團體金牌獎</b>（
+              <a href="/imgs/education/trml_team_gold_medal.png" rel="noreferrer" target="_blank">
+                獎狀
+              </a>
+              、
+              <a
+                href="https://news.ltn.com.tw/news/life/breakingnews/1801983"
+                rel="noreferrer"
+                target="_blank"
+              >
+                新聞報導
+              </a>
+              ）。
+            </>,
+          ],
+        })}
+        logo="/imgs/education/ckhs_taipei.png"
+        period={t({ en: 'Sep. 2014 — Jun. 2017', 'zh-TW': '2014.09 — 2017.06' })}
+        subtitle={t({
+          en: 'Taipei Municipal Chien Kuo High School',
+          'zh-TW': '臺北市立建國高級中學',
+        })}
+        title={t({ en: 'High School', 'zh-TW': '高中' })}
+      />
     </Box>
   );
 }
