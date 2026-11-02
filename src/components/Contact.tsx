@@ -3,14 +3,7 @@ import { ArrowRight2 } from 'iconsax-react';
 
 import { colors } from '@/theme/colorVariables';
 import { useLocale } from '@/utils/i18n';
-
-const contactItems = [
-  { href: 'https://www.facebook.com/haotang0619/', text: 'Facebook' },
-  { href: 'https://www.instagram.com/hao_tang_0619/', text: 'Instagram' },
-  { href: 'https://github.com/haotang0619/', text: 'GitHub' },
-  { href: 'https://leetcode.com/u/ht619/', text: 'LeetCode' },
-  { href: 'https://www.linkedin.com/in/haotang0619/', text: 'LinkedIn' },
-];
+import { SOCIALS } from '@/utils/socials';
 
 export default function Contact() {
   const { t } = useLocale();
@@ -26,6 +19,7 @@ export default function Contact() {
     >
       <Box sx={{ maxWidth: '850px', width: '100%' }}>
         <Typography
+          component="h2"
           id="CONTACT"
           sx={{
             color: 'text.secondary',
@@ -52,9 +46,9 @@ export default function Contact() {
         }}
       >
         <Grid item md={8} xs={12}>
-          {contactItems.map(({ href, text }) => (
+          {SOCIALS.map(({ href, name }) => (
             <Box
-              key={text}
+              key={name}
               sx={{
                 '& > svg': { color: 'primary.main', transform: 'rotate(-45deg)' },
                 alignItems: 'center',
@@ -74,7 +68,7 @@ export default function Contact() {
                 }}
                 variant="T24B"
               >
-                {text}
+                {name}
               </Typography>
             </Box>
           ))}

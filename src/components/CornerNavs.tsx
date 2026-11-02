@@ -10,6 +10,7 @@ import { Add, HambergerMenu, Moon, Sun1 } from 'iconsax-react';
 import { COLOR_SCHEME_STORAGE_KEY, colors } from '@/theme/colorVariables';
 import { useLocale } from '@/utils/i18n';
 import { MOBILE_HEADER_HEIGHT, scrollToSection } from '@/utils/scrollToSection';
+import { SOCIALS, SocialName } from '@/utils/socials';
 
 // Font Awesome has no LeetCode brand icon, so this wraps the Simple Icons (CC0) glyph in its format.
 const faLeetcode: IconDefinition = {
@@ -25,13 +26,13 @@ const faLeetcode: IconDefinition = {
   prefix: 'fab',
 };
 
-const socialItems = [
-  { href: 'https://www.facebook.com/haotang0619/', icon: faFacebook },
-  { href: 'https://www.instagram.com/hao_tang_0619/', icon: faInstagram },
-  { href: 'https://github.com/haotang0619/', icon: faGithub },
-  { href: 'https://leetcode.com/u/ht619/', icon: faLeetcode },
-  { href: 'https://www.linkedin.com/in/haotang0619/', icon: faLinkedin },
-];
+const socialIcons: Record<SocialName, IconDefinition> = {
+  Facebook: faFacebook,
+  GitHub: faGithub,
+  Instagram: faInstagram,
+  LeetCode: faLeetcode,
+  LinkedIn: faLinkedin,
+};
 
 const iconButtonSx = {
   '&:hover': { bgcolor: 'transparent', color: 'primary.main' },
@@ -104,10 +105,10 @@ export default function CornerNavs({
     </IconButton>
   );
 
-  const socialLinks = socialItems.map(({ href, icon }) => (
+  const socialLinks = SOCIALS.map(({ href, name }) => (
     <a href={href} key={href} rel="noreferrer" target="_blank">
       <IconButton sx={iconButtonSx}>
-        <FontAwesomeIcon fixedWidth icon={icon} />
+        <FontAwesomeIcon fixedWidth icon={socialIcons[name]} />
       </IconButton>
     </a>
   ));
