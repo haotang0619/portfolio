@@ -67,21 +67,23 @@ export default function Item({
             {subtitle}
           </Typography>
 
-          <Box
-            component="ul"
-            sx={{
-              '& a': { color: 'primary.main' },
-              '& b': { color: colors.text },
-              '& li + li': { marginTop: '8px' },
-              color: colors.textBody,
-              margin: '16px 0 0',
-              paddingLeft: '20px',
-            }}
-          >
-            {liItems.map((li, idx) => (
-              <li key={idx}>{li}</li>
-            ))}
-          </Box>
+          {liItems.length > 0 && (
+            <Box
+              component="ul"
+              sx={{
+                '& a': { color: 'primary.main' },
+                '& b': { color: colors.text },
+                '& li + li': { marginTop: '8px' },
+                color: colors.textBody,
+                margin: '16px 0 0',
+                paddingLeft: '20px',
+              }}
+            >
+              {liItems.map((li, idx) => (
+                <li key={idx}>{li}</li>
+              ))}
+            </Box>
+          )}
         </Box>
       </Box>
     </Box>

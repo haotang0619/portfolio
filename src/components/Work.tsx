@@ -33,6 +33,14 @@ export default function Work() {
       </Box>
 
       <Item
+        liItems={[]}
+        logo="/imgs/work/tsmc.png"
+        period={t({ en: 'Nov. 2026 — Present', 'zh-TW': '2026.11 — 至今' })}
+        subtitle="TSMC"
+        title={t({ en: 'Senior DevOps Engineer', 'zh-TW': '資深 DevOps 工程師' })}
+      />
+
+      <Item
         liItems={t({
           en: [
             <>
