@@ -1,5 +1,6 @@
 import { Box, Typography } from '@mui/material';
 
+import { colors } from '@/theme/colorVariables';
 import { useLocale } from '@/utils/i18n';
 
 export default function About() {
@@ -22,6 +23,42 @@ export default function About() {
         >
           {t({ en: 'ABOUT ME', 'zh-TW': '關於我' })}
         </Typography>
+
+        {/* Personal motto: shown bilingually in every locale. */}
+        <Box
+          sx={{
+            borderLeft: '3px solid',
+            borderLeftColor: 'primary.main',
+            display: 'flex',
+            flexFlow: 'column',
+            gap: '4px',
+            marginBottom: { sm: '48px', xs: '32px' },
+            maxWidth: '850px',
+            paddingLeft: { sm: '24px', xs: '16px' },
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: { sm: '24px', xs: '18px' },
+              letterSpacing: '2px',
+              lineHeight: { sm: '36px', xs: '28px' },
+            }}
+            variant="T24M"
+          >
+            承諾前謹慎評估，承諾後全力以赴。
+          </Typography>
+          <Typography
+            sx={{
+              color: colors.textMuted,
+              fontSize: { sm: '20px', xs: '16px' },
+              fontStyle: 'italic',
+              lineHeight: { sm: '32px', xs: '26px' },
+            }}
+            variant="T24M"
+          >
+            Commit with care, deliver with dare.
+          </Typography>
+        </Box>
 
         <Typography
           sx={{
