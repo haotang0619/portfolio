@@ -36,7 +36,7 @@ export default function Work() {
         liItems={[]}
         logo="/imgs/work/tsmc.png"
         period={t({ en: 'Nov. 2026 — Present', 'zh-TW': '2026.11 — 至今' })}
-        subtitle="TSMC"
+        subtitle={t({ en: 'TSMC', 'zh-TW': '台積電' })}
         title={t({ en: 'Senior DevOps Engineer', 'zh-TW': '資深 DevOps 工程師' })}
       />
 
