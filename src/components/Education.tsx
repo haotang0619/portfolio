@@ -18,6 +18,7 @@ export default function Education() {
     >
       <Box sx={{ maxWidth: '898px', padding: '0 24px', width: '100%' }}>
         <Typography
+          component="h2"
           id="EDUCATION"
           sx={{
             color: 'text.secondary',

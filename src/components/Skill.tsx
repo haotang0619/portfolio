@@ -62,6 +62,7 @@ export default function Skill() {
     >
       <Box sx={{ maxWidth: '850px', width: '100%' }}>
         <Typography
+          component="h2"
           id="SKILLS"
           sx={{
             color: 'text.secondary',

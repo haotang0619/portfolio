@@ -17,6 +17,7 @@ export default function About() {
     >
       <Box>
         <Typography
+          component="h2"
           id="ABOUT"
           sx={{ color: 'text.secondary', letterSpacing: '2px', marginBottom: '32px' }}
           variant="T14B"

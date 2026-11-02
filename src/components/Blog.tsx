@@ -27,6 +27,7 @@ export default function Blog() {
     >
       <Box sx={{ maxWidth: '850px', width: '100%' }}>
         <Typography
+          component="h2"
           id="FEATURED"
           sx={{
             color: 'text.secondary',

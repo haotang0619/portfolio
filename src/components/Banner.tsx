@@ -39,6 +39,7 @@ export default function Banner() {
 
       <Box sx={{ textAlign: 'center' }}>
         <Typography
+          component="h1"
           sx={{
             fontSize: { sm: '64px', xs: '40px' },
             lineHeight: { sm: '82px', xs: '52px' },
